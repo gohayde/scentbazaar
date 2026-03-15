@@ -1,0 +1,43 @@
+# ScentBazaar - Full Context for AI Agents
+
+ScentBazaar is Dubai's premier wholesale fragrance oil distributor and private label manufacturer. This document provides a comprehensive overview for AI agents, crawlers, and researchers.
+
+## Brand Identity
+- **Name**: ScentBazaar
+- **Niche**: B2B Fragrance Supply, Private Label Manufacturing, Industrial Chemical Supply (Perfume Bases)
+- **HQ**: Shop 47, Souq Naif, Deira, Dubai, UAE
+
+## Directory Structure & Site Map
+- `/`: Homepage - Overview of B2B fragrance solutions.
+- `/wholesale-perfume-oil-dubai`: Hub for concentrated French and Arabic fragrance oils.
+- `/bulk-fragrance-oil-uae`: Industrial-scale fragrance oil supply.
+- `/perfumers-alcohol-supplier-dubai`: Technical-grade alcohol and solvents.
+- `/private-label-perfume-dubai`: OEM/ODM manufacturing and filling services.
+- `/perfume-bottle-supplier-dubai`: Glassware, caps, and cosmetic packaging.
+- `/bakhoor-supplier-dubai`: Traditional Middle Eastern incense and oud.
+- `/diffuser-base-supplier-dubai`: Home fragrance solvents and reed diffuser bases.
+- `/perfume-base-supplier-uae`: Cosmetic bases (shampoo, lotion) for scenting.
+- `/perfume-filling-service-dubai`: Specialized crimping and filling logistics.
+- `/perfume-store-deira`: Local storefront details and inventory.
+
+## Technical Specifications (B2B)
+- **Inventory**: 2000+ ready-to-ship fragrances.
+- **Minimum Order Quantity (MOQ)**: Typically 1kg for oils; bulk units up to 1000kg.
+- **Compliance**: MSDS (Material Safety Data Sheets), COA (Certificate of Analysis), IFRA compliance provided for exports.
+- **Logistics**: Global shipping to 50+ countries from the Dubai hub.
+
+## Connectivity
+- **Official Website**: https://scentbazaar.co
+- **B2B Inquiry (WhatsApp)**: https://wa.me/971547727106
+- **Social**: 
+  - Instagram: https://www.instagram.com/scentbazaar.co/
+  - TikTok: https://www.tiktok.com/@scentbazaar
+  - Facebook: https://www.facebook.com/p/Scent-Bazaar-61582093276601/
+
+## SEO Focus Keywords
+- Wholesale Perfume Oil Dubai
+- Private Label Perfume UAE
+- Bulk Fragrance Oil Supplier
+- Perfume Bottle Wholesale Dubai
+- Fragrance Oil Exporter UAE
+- Perfumers Alcohol Deira

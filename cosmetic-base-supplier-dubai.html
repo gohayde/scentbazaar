@@ -18,17 +18,20 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ScentBazaar">
     <meta property="og:url" content="https://scentbazaar.co/cosmetic-base-supplier-dubai">
-    <meta property="og:image" content="https://scentbazaar.co/og-image.jpg">
+    <meta property="og:image" content="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cosmetic & Perfume Base Supplier UAE | Wholesale Dubai">
     <meta name="twitter:description" content="Wholesale cosmetic bases in Dubai. Lotion, cream & soap bases for private label fragrance brands. Premium UAE supplier for perfume manufacturing raw materials.">
-    <meta name="twitter:image" content="https://scentbazaar.co/og-image.jpg">
+    <meta name="twitter:image" content="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="preload" as="image" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f544609b8fe.png" fetchpriority="high">
 
     <style>
         *,
@@ -600,6 +603,48 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        /* BREADCRUMBS */
+        .breadcrumb-nav {
+            background: #f8f8f8;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .breadcrumb-nav li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .breadcrumb-nav li:not(:last-child)::after {
+            content: '›';
+            font-size: 1.1rem;
+            line-height: 1;
+            color: #ccc;
+        }
+
+        .breadcrumb-nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 
 
@@ -639,7 +684,7 @@
             <a href="/" class="logo" style="display:flex;align-items:center;">
                 <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
                     alt="ScentBazaar logo"
-                    style="height:45px;width:auto;border-radius:6px;transition: transform 0.3s ease;" loading="lazy">
+                    style="height:45px;width:auto;border-radius:6px;transition: transform 0.3s ease;" loading="eager" fetchpriority="high" width="168" height="45">
             </a>
             <nav class="nav" id="nav">
                 <a href="/">Home</a>
@@ -668,11 +713,19 @@
             </nav>
             <a href="https://wa.me/971547727106?text=Hi%20ScentBazaar" class="btn btn-primary header-cta"
                 target="_blank" rel="noopener">Contact</a>
-            <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('show')">
+            <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('show')" aria-label="Toggle navigation menu" aria-expanded="false" role="button">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </header>
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Cosmetic Bases</li>
+            </ol>
+        </div>
+    </nav>
 
     <main>
 
@@ -717,7 +770,7 @@
                 </div>
                 <div>
                     <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f544609b8fe.png"
-                        alt="Cosmetic bases and unscented lotions supplier Dubai" loading="lazy">
+                        alt="Cosmetic bases and unscented lotions supplier Dubai" loading="lazy" width="600" height="600">
                 </div>
             </div>
         </div>
@@ -749,7 +802,7 @@
                 </div>
                 <div>
                     <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd4aeba4874aba3db424.png"
-                        alt="Bulk cosmetic supply uae" loading="lazy">
+                        alt="Bulk cosmetic supply uae" loading="lazy" width="600" height="600">
                 </div>
             </div>
         </div>
@@ -812,7 +865,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
-                    alt="ScentBazaar logo" style="height:50px;width:auto;margin-bottom:20px;border-radius:8px;">
+                    alt="ScentBazaar logo" style="height:50px;width:auto;margin-bottom:20px;border-radius:8px;" width="186" height="50">
                 <p>The UAE's most trusted B2B fragrance ecosystem. From raw perfume oils to private label manufacturing
                     and global export, we empower scent brands to scale.</p>
             </div>
@@ -879,3 +932,5 @@
 </body>
 
 </html>
+
+

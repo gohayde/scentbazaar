@@ -18,14 +18,30 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ScentBazaar">
     <meta property="og:url" content="https://scentbazaar.co/">
-    <meta property="og:image" content="https://scentbazaar.co/og-image.jpg">
+    <meta property="og:image" content="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Perfume Oil Supplier Dubai | Wholesale Fragrance – ScentBazaar">
     <meta name="twitter:description" content="Buy wholesale perfume oils, perfumers alcohol, bakhoor & private label fragrance in Dubai. 2000+ scents. Ships worldwide from Naif Souq, Deira.">
-    <meta name="twitter:image" content="https://scentbazaar.co/og-image.jpg">
+    <meta name="twitter:image" content="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google tag (gtag.js) Placeholder -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Google Search Console Verification Placeholder -->
+    <!-- <meta name="google-site-verification" content="verification_placeholder" /> -->
+
+    <link rel="preload" as="image" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png" fetchpriority="high">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -1159,6 +1175,76 @@
             opacity: 1;
             transform: translateY(0)
         }
+
+        /* REVIEWS SECTION */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .review-stars {
+            color: #ffb400;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .review-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .author-info strong {
+            display: block;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: #888;
+        }
     </style>
 
 
@@ -1174,7 +1260,7 @@
           "url": "https://scentbazaar.co",
           "telephone": "+971547727106",
           "priceRange": "$$",
-          "image": "https://scentbazaar.co/og-image.jpg",
+          "image": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Souq Naif, Shop 47, 47 St, Naif",
@@ -1271,7 +1357,8 @@
             <a href="/" class="logo" style="display:flex;align-items:center;">
                 <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
                     alt="ScentBazaar logo"
-                    style="height:45px;width:auto;border-radius:6px;transition: transform 0.3s ease;" loading="eager" fetchpriority="high">
+                    style="height:45px;width:auto;border-radius:6px;transition: transform 0.3s ease;" 
+                    loading="eager" fetchpriority="high" width="168" height="45">
             </a>
             <nav class="nav" id="nav">
                 <a href="/">Home</a>
@@ -1300,7 +1387,8 @@
             </nav>
             <a href="https://wa.me/971547727106?text=Hi%20ScentBazaar" class="btn btn-primary header-cta"
                 target="_blank" rel="noopener">Contact</a>
-            <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('show')">
+            <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('show')"
+                aria-label="Toggle navigation menu" aria-expanded="false" role="button">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -1313,7 +1401,7 @@
         <div class="container">
             <div class="hero-content fade-up">
                 <span class="tag">Dubai's Trusted Fragrance Supplier</span>
-                <h1>Global Perfume Oil & Fragrance <span>Supply Hub</span> – Based in Dubai</h1>
+                <h1>Wholesale Perfume Oil & Fragrance <span>Supplier</span> – Dubai</h1>
                 <p>Wholesale perfume oils, perfumers alcohol, fragrance bases, bottles, bakhoor and private label
                     perfume filling — shipping worldwide from Dubai.</p>
                 <div class="hero-btns">
@@ -1415,13 +1503,63 @@
         </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="section-bg" id="reviews" style="padding:100px 0">
+        <div class="container">
+            <div style="text-align:center;max-width:700px;margin:0 auto 48px" class="fade-up">
+                <span class="tag">Client Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Trusted by retail perfumers, bulk distributors, and private label brands across the UAE and 50+ countries.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The best supplier in Naif. Their French perfume oils are top-notch and the longevity is incredible. Highly recommended for wholesale."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <strong>Ahmed Al Mansoori</strong>
+                            <span>UAE Retailer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"ScentBazaar helped me launch my own brand. Their private label service is very professional, from bottling to the final packaging."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <strong>Sarah J.</strong>
+                            <span>Private Label Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Consistent quality and fast export. We've been sourcing our bulk fragrance oils from them for 3 years now without any issues."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <strong>Michael K.</strong>
+                            <span>International Distributor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px" class="fade-up">
+                <p style="color:#888;font-size:0.9rem">Join 172+ happy customers who rated us 5-stars on Google.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- SCENT LIBRARY -->
     <section class="section-bg scent-section" id="scent-library" style="padding:80px 0">
         <div class="container">
             <div class="scent-grid">
                 <div class="scent-img fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd4aeba4871bf53db423.png"
-                        alt="wholesale perfume oil supplier dubai - over 2000 fragrance options" loading="lazy"></div>
+                        alt="wholesale perfume oil supplier dubai - over 2000 fragrance options" 
+                        loading="lazy" width="600" height="600"></div>
                 <div class="scent-text fade-up">
                     <span class="tag">Dubai’s Largest Scent Library</span>
                     <h2 style="margin-bottom: 20px;">2000+ French & Arabic Masterpiece Fragrance Oils</h2>
@@ -1466,7 +1604,7 @@
                 <div class="pl-img fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49cab7f72607c7a01c.png"
                         alt="private label perfume filling dubai and custom blending service at ScentBazaar"
-                        loading="lazy"></div>
+                        loading="lazy" width="600" height="550"></div>
             </div>
         </div>
     </section>
@@ -1477,7 +1615,8 @@
             <div class="raw-grid">
                 <div class="raw-img fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f832c09b8fd.png"
-                        alt="perfumers alcohol supplier uae and fragrance raw materials in Dubai" loading="lazy">
+                        alt="perfumers alcohol supplier uae and fragrance raw materials in Dubai" 
+                        loading="lazy" width="600" height="550">
                 </div>
                 <div class="fade-up">
                     <span class="tag">Technical Grade Supply</span>
@@ -1667,13 +1806,13 @@
                 <div class="footer-brand">
                     <a href="/" class="logo" style="display:flex;align-items:center;">
                         <img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
-                            alt="ScentBazaar logo" style="height:54px;width:auto;border-radius:6px;">
+                            alt="ScentBazaar logo" style="height:54px;width:auto;border-radius:6px;" width="200" height="54">
                     </a>
                     <p>ScentBazaar is a Dubai-based wholesale perfume oil supplier in Souq Naif, Deira, providing
                         premium fragrance oils, raw materials, and bulk fragrance solutions to manufacturers, retailers,
                         and private label brands worldwide.</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/scentbazaar/" class="social-icon" target="_blank"
+                        <a href="https://www.instagram.com/scentbazaar.co/" class="social-icon" target="_blank"
                             rel="noopener" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
