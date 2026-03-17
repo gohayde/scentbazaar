@@ -6,6 +6,8 @@
 > label and OEM fragrance manufacturing services. It exports to 50+ countries and
 > holds 172 verified 5-star reviews.
 
+license: https://scentbazaar.co/terms-of-service
+
 ## Key Pages
 
 - [Wholesale Perfume Oils](https://scentbazaar.co/wholesale-perfume-oil-dubai): 2,000+ fragrance oils in bulk and wholesale quantities
@@ -37,3 +39,9 @@
 - Export: 50+ countries worldwide
 - Minimum Order: From 1 kg (bulk up to 1,000 kg+)
 - Compliance: IFRA-compliant, MSDS & CoA available on request
+
+
+
+
+
+

@@ -18,8 +18,6 @@
     <link rel="apple-touch-icon" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b61f145b89c74e8b8ff2e8.png">
     <meta name="description"
         content="Wholesale bakhoor & oud incense supplier in Dubai. Authentic Arabic Dukhoon, raw oud chips & resin for retailers and exporters. Ship worldwide.">
-    <meta name="keywords"
-        content="bakhoor supplier dubai, wholesale oud dubai, premium incense uae, arabic incense supplier, dukhoon manufacturer dubai, oud ma'attar uae">
     <link rel="canonical" href="https://scentbazaar.co/bakhoor-supplier-dubai">
     <link rel="alternate" hreflang="en" href="https://scentbazaar.co/bakhoor-supplier-dubai">
     <link rel="alternate" hreflang="x-default" href="https://scentbazaar.co/bakhoor-supplier-dubai">
@@ -27,7 +25,7 @@
     <meta property="og:description"
         content="Wholesale bakhoor & oud incense supplier in Dubai. Authentic Arabic Dukhoon, raw oud chips & resin for retailers and exporters. Ship worldwide.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ScentBazaar">
+    <meta property="og:site_name" content="Scent Bazaar">
     <meta property="og:locale" content="en_AE">
     <meta property="og:url" content="https://scentbazaar.co/bakhoor-supplier-dubai">
     <meta property="og:image" content="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png">
@@ -41,9 +39,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://assets.cdn.filesafe.space" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="preload" as="image" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png" fetchpriority="high">
 
     <style>
@@ -658,6 +656,12 @@
             text-decoration: underline;
         }
 
+        @media(max-width:768px){
+            .nav.show{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(8,8,8,0.98);z-index:999;justify-content:center;align-items:center;gap:2rem;padding:2rem}
+            .nav.show a,.nav.show .dropdown>a{color:#fff;font-size:1.2rem}
+            .nav.show .dropdown-content{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent;padding:0;margin-top:0.5rem}
+            .nav.show .dropdown:hover .dropdown-content,.nav.show .dropdown.active .dropdown-content{display:flex;flex-direction:column;gap:0.5rem}
+        }
     </style>
 
 
@@ -668,6 +672,7 @@
         {
           "@type": "Product",
           "name": "Wholesale Bakhoor & Dukhoon Dubai",
+          "image": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png",
           "description": "Authentic Arabian bakhoor, dukhoon tablets and oud wood chips for wholesale. Private label bakhoor manufacturing available from Dubai.",
           "brand": { "@id": "https://scentbazaar.co/#scentbazaar" },
           "offers": {
@@ -696,7 +701,7 @@
         <div class="container header-inner">
             <a href="/" class="logo" style="display:flex;align-items:center;">
                 <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
-                    alt="ScentBazaar logo"
+                    alt="Scent Bazaar logo"
                     style="height:45px;width:auto;border-radius:6px;transition: transform 0.3s ease;" loading="eager" fetchpriority="high" width="168" height="45">
             </a>
             <nav class="nav" id="nav">
@@ -708,9 +713,12 @@
                         <a href="/bulk-fragrance-oil-uae">Bulk Industrial Oils</a>
                         <a href="/perfumers-alcohol-supplier-dubai">Perfumers Alcohol</a>
                         <a href="/perfume-bottle-supplier-dubai">Bottles & Packaging</a>
+                        <a href="/perfume-caps-spray-pumps">Caps & Spray Pumps</a>
                         <a href="/bakhoor-supplier-dubai">Premium Bakhoor</a>
+                        <a href="/candle-fragrance-oil-supplier-dubai">Candle Fragrance Oils</a>
                         <a href="/diffuser-base-supplier-dubai">Reed Diffuser Bases</a>
-                        <a href="/perfume-base-supplier-uae">Cosmetic & Lotion Bases</a>
+                        <a href="/perfume-base-supplier-uae">Perfume Bases</a>
+                        <a href="/cosmetic-base-supplier-dubai">Cosmetic Bases</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -718,13 +726,14 @@
                     <div class="dropdown-content">
                         <a href="/wholesale-perfume-oil-dubai">Wholesale Distribution</a>
                         <a href="/private-label-perfume-dubai">Private Label Filling</a>
+                        <a href="/custom-perfume-blending-dubai">Custom Blending</a>
                         <a href="/perfume-filling-service-dubai">Contract Filling & Crimping</a>
                         <a href="/fragrance-oil-supplier-dubai">Global Export & Logistics</a>
                     </div>
                 </div>
                 <a href="/perfume-store-deira">Visit Store</a>
             </nav>
-            <a href="https://wa.me/971547727106?text=Hi%20ScentBazaar" class="btn btn-primary header-cta"
+            <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar" class="btn btn-primary header-cta"
                 target="_blank" rel="noopener noreferrer">Contact</a>
             <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('show')" aria-label="Toggle navigation menu" aria-expanded="false" role="button">
                 <span></span><span></span><span></span>
@@ -748,7 +757,7 @@
             <div class="seo-hero-content">
                 <span class="tag">Authentic Middle Eastern Incense</span>
                 <h1>Wholesale Bakhoor Supplier in Dubai</h1>
-                <p>Honor centuries of Arabian tradition with ScentBazaar. We are a premier manufacturer and wholesale
+                <p>Honor centuries of Arabian tradition with Scent Bazaar. We are a premier manufacturer and wholesale
                     supplier of authentic Bakhoor, Dukhoon, and pure Oud wood chips for the global market.</p>
                 <div style="margin-top: 30px;">
                     <a href="https://wa.me/971547727106?text=I%20want%20to%20buy%20wholesale%20bakhoor%20and%20oud"
@@ -767,7 +776,7 @@
                     <h2>Authentic Bakhoor & Dukhoon Manufacturing</h2>
                     <p>In Middle Eastern culture, scenting the home and clothing with smoldering incense is a sign of
                         ultimate hospitality and prestige. As a deeply rooted <strong>Bakhoor supplier in
-                            Dubai</strong>, ScentBazaar masterfully blends traditional techniques with modern,
+                            Dubai</strong>, Scent Bazaar masterfully blends traditional techniques with modern,
                         consistent manufacturing protocols to deliver premium incense to global retailers.</p>
                     <p>We supply two primary categories of traditional incense. <strong>Dukhoon</strong> is created by
                         grinding premium Oud wood and sandalwood into a fine powder, mixing it with binding resins,
@@ -796,7 +805,7 @@
                 <div>
                     <span class="tag">Raw Materials</span>
                     <h2>Pure Oud Chips and Resins</h2>
-                    <p>For brands and artisans looking to manufacture their own incense, ScentBazaar functions as a
+                    <p>For brands and artisans looking to manufacture their own incense, Scent Bazaar functions as a
                         vital supplier of the raw, foundational materials required for authentic Arabian perfumery.</p>
                     <ul>
                         <li><strong>Agarwood (Oud) Chips:</strong> We import graded Indian, Cambodian, and Vietnamese
@@ -826,7 +835,7 @@
             <h2>Exporting the Heritage of the UAE</h2>
             <p>From our headquarters in the historic Naif Souq, the traditional heart of Dubai's incense trade, we
                 export thousands of kilos of Bakhoor globally. If you operate an oriental perfumery in London, a
-                high-end boutique in Saudi Arabia, or a cultural goods store in the USA, ScentBazaar guarantees
+                high-end boutique in Saudi Arabia, or a cultural goods store in the USA, Scent Bazaar guarantees
                 authentic supply.</p>
             <p>We provide full <a href="/private-label-perfume-dubai" style="text-decoration: underline;">private
                     label services</a> for Bakhoor. We can manufacture the tablets or blended wood chips, package them
@@ -878,8 +887,20 @@
                     <details>
                         <summary>Are there customs restrictions on shipping Oud wood internationally?</summary>
                         <p>Real agarwood is subject to CITES (Convention on International Trade in Endangered Species)
-                            regulations. As experienced exporters, ScentBazaar handles the necessary certifications or
+                            regulations. As experienced exporters, Scent Bazaar handles the necessary certifications or
                             formulates high-fidelity synthetic alternatives to ensure smooth customs clearance.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>How long should quality Bakhoor burn on charcoal?</summary>
+                        <p>Quality Bakhoor should burn slowly and consistently for 20 to 40 minutes per piece on properly heated charcoal. Burn time depends on the density of the woodchip and the oil load. Our premium Oud Ma'attar products are formulated to give long, rich, non-acrid burns without excessive smoke, releasing fragrance that lingers in a space for hours.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>Is your Bakhoor suitable for gifting and luxury hospitality?</summary>
+                        <p>Absolutely. Our premium Bakhoor range is presented in elegant, gift-ready packaging, making it ideal for luxury hospitality gifting, corporate gifts, and high-end retail. Many five-star hotels, royal households, and premium lifestyle brands in the GCC and internationally source their exclusive Bakhoor from Scent Bazaar for ambient scenting and guest gifting.</p>
                     </details>
                 </div>
             </div>
@@ -896,13 +917,13 @@
                 <div class="footer-brand">
                     <a href="/" class="logo" style="display:flex;align-items:center;">
                         <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png"
-                            alt="ScentBazaar logo" style="height:54px;width:auto;border-radius:6px;" loading="lazy" width="200" height="54">
+                            alt="Scent Bazaar logo" style="height:54px;width:auto;border-radius:6px;" loading="lazy" width="200" height="54">
                     </a>
-                    <p>ScentBazaar is a Dubai-based wholesale perfume oil supplier in Souq Naif, Deira, providing
+                    <p>Scent Bazaar is a Dubai-based wholesale perfume oil supplier in Souq Naif, Deira, providing
                         premium fragrance oils, raw materials, and bulk fragrance solutions to manufacturers, retailers,
                         and private label brands worldwide.</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/scentbazaar.co/" class="social-icon" target="_blank"
+                        <a href="https://www.instagram.com/scentbazaar/" class="social-icon" target="_blank"
                             rel="noopener noreferrer" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -977,7 +998,7 @@
             </div>
             <div class="footer-bottom">
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                    <p>© 2026 ScentBazaar. All rights reserved.</p>
+                    <p>© 2026 Scent Bazaar. All rights reserved.</p>
                     <div style="display: flex; gap: 20px; font-size: 0.85rem;">
                         <a href="/privacy-policy" style="color: #666; transition: color 0.3s; text-decoration: none;">Privacy Policy</a>
                         <a href="/terms-of-service" style="color: #666; transition: color 0.3s; text-decoration: none;">Terms of Service</a>
@@ -988,7 +1009,7 @@
     </footer>
 
     <!-- CONTACT FLOATING BUTTON -->
-    <a href="https://wa.me/971547727106?text=Hi%20ScentBazaar%2C%20I%27d%20like%20to%20make%20an%20inquiry"
+    <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%27d%20like%20to%20make%20an%20inquiry"
         class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contact">
         <svg viewBox="0 0 24 24">
             <path
@@ -1004,12 +1025,14 @@
             header.classList.toggle('scrolled', isScrolled);
         });
 
-        // Mobile nav
-        const style = document.createElement('style');
-        style.textContent = `@media(max-width:768px){ .nav.show{display:flex!important;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);padding:24px;box-shadow:var(--shadow-lg)} .nav.show a{color:var(--dark)!important;padding:12px 0;border-bottom:1px solid #eee} }`;
-        document.head.appendChild(style);
     </script>
 </body>
 
 </html>
+
+
+
+
+
+
 

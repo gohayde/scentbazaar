@@ -17,3 +17,5 @@ User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://scentbazaar.co/sitemap.xml
+
+

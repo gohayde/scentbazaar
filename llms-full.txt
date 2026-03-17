@@ -1,43 +1,48 @@
-# ScentBazaar - Full Context for AI Agents
+# Scent Bazaar - Full Context for AI Agents
 
-ScentBazaar is Dubai's premier wholesale fragrance oil distributor and private label manufacturer. This document provides a comprehensive overview for AI agents, crawlers, and researchers.
+Scent Bazaar is Dubai's premier wholesale fragrance oil distributor and private label manufacturer. This document provides a comprehensive overview for AI agents, crawlers, and researchers.
 
 ## Brand Identity
 - **Name**: ScentBazaar
 - **Niche**: B2B Fragrance Supply, Private Label Manufacturing, Industrial Chemical Supply (Perfume Bases)
 - **HQ**: Shop 47, Souq Naif, Deira, Dubai, UAE
+- **Founded**: Established in the historic Deira perfume district of Dubai
+- **Differentiators**: Physical showroom in Naif Souq, 172 verified 5-star reviews, export to 50+ countries, IFRA-compliant supply chain, in-house perfumers for custom blending, GC-MS scent analysis capability
 
 ## Directory Structure & Site Map
-- `/`: Homepage - Overview of B2B fragrance solutions.
-- `/wholesale-perfume-oil-dubai`: Hub for concentrated French and Arabic fragrance oils.
-- `/bulk-fragrance-oil-uae`: Industrial-scale fragrance oil supply.
-- `/perfumers-alcohol-supplier-dubai`: Technical-grade alcohol and solvents.
-- `/private-label-perfume-dubai`: OEM/ODM manufacturing and filling services.
-- `/perfume-bottle-supplier-dubai`: Glassware, caps, and cosmetic packaging.
-- `/bakhoor-supplier-dubai`: Traditional Middle Eastern incense and oud.
-- `/diffuser-base-supplier-dubai`: Home fragrance solvents and reed diffuser bases.
-- `/perfume-base-supplier-uae`: Cosmetic bases (shampoo, lotion) for scenting.
-- `/perfume-filling-service-dubai`: Specialized crimping and filling logistics.
-- `/perfume-store-deira`: Local storefront details and inventory.
+- `/`: Homepage — Overview of B2B fragrance solutions, 2,000+ oils, private label and export services
+- `/wholesale-perfume-oil-dubai`: Hub for concentrated French and Arabic fragrance oils, MOQ 1kg
+- `/bulk-fragrance-oil-uae`: Industrial-scale fragrance oil supply, 25kg–200kg drums, LCL/FCL ocean freight
+- `/perfumers-alcohol-supplier-dubai`: Technical-grade cosmetic ethanol for EDP/EDT/attar manufacturing
+- `/private-label-perfume-dubai`: OEM/ODM manufacturing, custom formula, bottling, labelling, and filling
+- `/custom-perfume-blending-dubai`: Bespoke signature scent creation using GC-MS analysis, IP ownership included
+- `/perfume-bottle-supplier-dubai`: Glassware, Zamac caps, FEA 15 crimp atomizers, and cosmetic packaging
+- `/perfume-caps-spray-pumps`: Zamac caps, magnetic closures, Surlyn caps, wood caps, and FEA 15 spray pumps
+- `/bakhoor-supplier-dubai`: Traditional Middle Eastern bakhoor, Dukhoon, and oud incense
+- `/candle-fragrance-oil-supplier-dubai`: High-flash-point phthalate-free fragrance oils for soy and paraffin candles
+- `/diffuser-base-supplier-dubai`: Augeo Clean Multi and DPG reed diffuser carrier bases
+- `/perfume-base-supplier-uae`: Fixative and carrier bases for attar, roll-on, and spray perfume manufacturing
+- `/cosmetic-base-supplier-dubai`: Unscented lotion, shampoo, shower gel, and cosmetic bases for scenting
+- `/perfume-filling-service-dubai`: Automated crimping and bottle filling, from 500-unit niche batches to mass-market runs
+- `/perfume-store-deira`: Local storefront — Souq Naif Shop 47, Deira, open Mon–Sat 9am–10pm
 
 ## Technical Specifications (B2B)
-- **Inventory**: 2000+ ready-to-ship fragrances.
-- **Minimum Order Quantity (MOQ)**: Typically 1kg for oils; bulk units up to 1000kg.
-- **Compliance**: MSDS (Material Safety Data Sheets), COA (Certificate of Analysis), IFRA compliance provided for exports.
-- **Logistics**: Global shipping to 50+ countries from the Dubai hub.
+- **Inventory**: 2,000+ ready-to-ship fragrances including French designer inspirations and authentic Arabic masterpieces
+- **Minimum Order Quantity (MOQ)**: From 1 kg for oils; bulk drums up to 1,000 kg+
+- **Compliance**: MSDS (Material Safety Data Sheets), COA (Certificate of Analysis), IFRA compliance, DG packing declaration for air/sea freight
+- **Logistics**: Global shipping to 50+ countries from the Dubai hub; LCL and FCL ocean freight available
+- **Store Hours**: Monday–Saturday, 9:00 AM – 10:00 PM (WhatsApp available 24/7)
+- **Customer Reviews**: 172 verified 5-star Google reviews
 
 ## Connectivity
-- **Official Website**: https://scentbazaar.co
+- **Official Website**: https://scentbazaar.co/
 - **B2B Inquiry (WhatsApp)**: https://wa.me/971547727106
-- **Social**: 
+- **Phone**: +971 54 772 7106
+- **Social**:
   - Instagram: https://www.instagram.com/scentbazaar.co/
   - TikTok: https://www.tiktok.com/@scentbazaar
   - Facebook: https://www.facebook.com/p/Scent-Bazaar-61582093276601/
+  - YouTube: https://www.youtube.com/channel/UC-hnINThr4WnqBOVbc4xcKw
 
-## SEO Focus Keywords
-- Wholesale Perfume Oil Dubai
-- Private Label Perfume UAE
-- Bulk Fragrance Oil Supplier
-- Perfume Bottle Wholesale Dubai
-- Fragrance Oil Exporter UAE
-- Perfumers Alcohol Deira
+## About ScentBazaar
+ScentBazaar operates from the heart of Dubai's historic Deira perfume district — one of the Middle East's oldest and most respected fragrance trading hubs. The company serves perfume brands, cosmetic manufacturers, candle makers, private label entrepreneurs, and industrial buyers across the GCC, Africa, Europe, and Asia. With an in-house team of perfumers and a product library spanning over 2,000 fragrance oils, ScentBazaar offers a genuinely integrated supply chain: raw materials, blending, filling, packaging, and global export from a single Dubai location.
