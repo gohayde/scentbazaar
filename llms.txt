@@ -37,8 +37,8 @@ license: https://scentbazaar.co/terms-of-service
 - Rating: 5.0 stars (172 verified reviews)
 - Catalog: 2,000+ French and Arabic fragrance oils
 - Export: 50+ countries worldwide
-- Minimum Order: From 1 kg (bulk up to 1,000 kg+)
-- Compliance: IFRA-compliant, MSDS & CoA available on request
+- Minimum Order: From 100ml (bulk up to 1,000 kg+)
+- Compliance: MSDS & CoA available on request
 
 
 

@@ -7,11 +7,11 @@ Scent Bazaar is Dubai's premier wholesale fragrance oil distributor and private 
 - **Niche**: B2B Fragrance Supply, Private Label Manufacturing, Industrial Chemical Supply (Perfume Bases)
 - **HQ**: Shop 47, Souq Naif, Deira, Dubai, UAE
 - **Founded**: Established in the historic Deira perfume district of Dubai
-- **Differentiators**: Physical showroom in Naif Souq, 172 verified 5-star reviews, export to 50+ countries, IFRA-compliant supply chain, in-house perfumers for custom blending, GC-MS scent analysis capability
+- **Differentiators**: Physical showroom in Naif Souq, 172 verified 5-star reviews, export to 50+ countries, fully documented supply chain (MSDS & CoA), in-house perfumers for custom blending, GC-MS scent analysis capability
 
 ## Directory Structure & Site Map
 - `/`: Homepage — Overview of B2B fragrance solutions, 2,000+ oils, private label and export services
-- `/wholesale-perfume-oil-dubai`: Hub for concentrated French and Arabic fragrance oils, MOQ 1kg
+- `/wholesale-perfume-oil-dubai`: Hub for concentrated French and Arabic fragrance oils, MOQ 100ml
 - `/bulk-fragrance-oil-uae`: Industrial-scale fragrance oil supply, 25kg–200kg drums, LCL/FCL ocean freight
 - `/perfumers-alcohol-supplier-dubai`: Technical-grade cosmetic ethanol for EDP/EDT/attar manufacturing
 - `/private-label-perfume-dubai`: OEM/ODM manufacturing, custom formula, bottling, labelling, and filling
@@ -28,8 +28,8 @@ Scent Bazaar is Dubai's premier wholesale fragrance oil distributor and private 
 
 ## Technical Specifications (B2B)
 - **Inventory**: 2,000+ ready-to-ship fragrances including French designer inspirations and authentic Arabic masterpieces
-- **Minimum Order Quantity (MOQ)**: From 1 kg for oils; bulk drums up to 1,000 kg+
-- **Compliance**: MSDS (Material Safety Data Sheets), COA (Certificate of Analysis), IFRA compliance, DG packing declaration for air/sea freight
+- **Minimum Order Quantity (MOQ)**: From 100ml for oils; bulk drums up to 1,000 kg+
+- **Compliance**: MSDS (Material Safety Data Sheets), COA (Certificate of Analysis), DG packing declaration for air/sea freight
 - **Logistics**: Global shipping to 50+ countries from the Dubai hub; LCL and FCL ocean freight available
 - **Store Hours**: Monday–Saturday, 9:00 AM – 10:00 PM (WhatsApp available 24/7)
 - **Customer Reviews**: 172 verified 5-star Google reviews
