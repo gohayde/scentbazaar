@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file:*)",
+      "Bash(do)",
+      "Bash(if grep:*)",
+      "Bash(then)",
+      "Bash(echo \"✓ $file \\(already has dates\\)\")",
+      "Bash(else)",
+      "Bash(sed -i 's|<meta name=\"\"robots\"\" content=\"\"index, follow\"\">|<meta name=\"\"robots\"\" content=\"\"index, follow\"\">\\\\n    <meta property=\"\"article:published_time\"\" content=\"\"2026-03-17T00:00:00Z\"\">\\\\n    <meta property=\"\"article:modified_time\"\" content=\"\"2026-03-17T00:00:00Z\"\">|' \"$file\")",
+      "Bash(echo \"✓ $file \\(dates added\\)\")",
+      "Bash(fi)",
+      "Bash(grep -ln \"review\\\\|testimonial\" \"m:\\\\Scent Bazaar\\\\ScentBazaar Website\"/*.html)",
+      "Bash(grep -l \"fragrance-oil-supplier-dubai.*Global Export\" *.html)"
+    ]
+  }
+}
