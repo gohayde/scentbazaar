@@ -8,7 +8,8 @@
       "WebFetch(domain:scentbazaar.co)",
       "Bash(curl -s \"https://scentbazaar.co/wholesale-perfume-oil-dubai\" -H \"User-Agent: Mozilla/5.0\")",
       "Bash(\"C:/temp_wholesale.html\")",
-      "Read(//c//**)"
+      "Read(//c//**)",
+      "Bash(python3:*)"
     ]
   }
 }
