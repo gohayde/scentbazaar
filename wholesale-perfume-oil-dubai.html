@@ -48,7 +48,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-    <link rel="preload" as="image" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f832c09b8fd.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/69b4fd49bfc81f832c09b8fd.webp" fetchpriority="high">
 
     <style>
         *,
@@ -353,7 +353,7 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(160deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.3) 100%),
-                url('https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f832c09b8fd.png') center/cover no-repeat;
+                image-set(url('/images/69b4fd49bfc81f832c09b8fd.webp') type('image/webp'), url('https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f832c09b8fd.png') type('image/png')) center/cover no-repeat;
             filter: brightness(0.8) contrast(1.1);
             z-index: 1;
         }
@@ -938,38 +938,12 @@
                 <div style="text-align: center; padding: 30px;">
                     <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #ff4700, #ff6b35); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">SB</div>
                     <h3 style="margin: 20px 0;">Founder & Master Perfumer</h3>
-                    <p style="max-width: 500px; margin: 0 auto; color: #666; line-height: 1.8;">With over 15 years of experience in fragrance chemistry and Middle Eastern perfumery, our founder has built Scent Bazaar into the region's most trusted wholesale fragrance supplier. Specialized in Oud composition, French fragrance innovation, and international fragrance safety standards.</p>
+                    <p style="max-width: 500px; margin: 0 auto; color: #666; line-height: 1.8;">Specialized in fragrance chemistry and Middle Eastern perfumery, our founder built Scent Bazaar to serve the region's B2B fragrance market with deep expertise in Oud composition, French fragrance innovation, and international fragrance safety standards.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="section-bg">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span class="tag">Trusted by Industry Leaders</span>
-                <h2>What Our Wholesale Partners Say</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
-                    <p style="margin-bottom: 20px; color: #555; font-style: italic;">"Scent Bazaar's consistent quality and MOQ flexibility transformed our niche perfume brand. Their oils deliver the exact projection and longevity our customers expect."</p>
-                    <p style="font-weight: 600; color: var(--dark);">Ahmed Al-Mansouri</p>
-                    <p style="font-size: 0.9rem; color: #888; margin: 0;">Niche Fragrance Brand Owner, Dubai</p>
-                </div>
-                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
-                    <p style="margin-bottom: 20px; color: #555; font-style: italic;">"As a cosmetic manufacturer, we need reliable suppliers who understand international compliance. Scent Bazaar's MSDS documentation and safety paperwork are impeccable."</p>
-                    <p style="font-weight: 600; color: var(--dark);">Fatima Al-Kaabi</p>
-                    <p style="font-size: 0.9rem; color: #888; margin: 0;">Cosmetic Manufacturing Director, Abu Dhabi</p>
-                </div>
-                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
-                    <p style="margin-bottom: 20px; color: #555; font-style: italic;">"We've sourced from multiple wholesale suppliers across the region. Scent Bazaar's inventory depth and shipping logistics are unmatched. Highly recommended."</p>
-                    <p style="font-weight: 600; color: var(--dark);">Mohammed Al-Dosari</p>
-                    <p style="font-size: 0.9rem; color: #888; margin: 0;">E-Commerce Fragrance Brand, Saudi Arabia</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ -->
     <section class="section-bg" id="faq">
@@ -1141,8 +1115,8 @@
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                     <p>© 2026 Scent Bazaar. All rights reserved.</p>
                     <div style="display: flex; gap: 20px; font-size: 0.85rem;">
-                        <a href="/privacy-policy" style="color: #666; transition: color 0.3s; text-decoration: none;">Privacy Policy</a>
-                        <a href="/terms-of-service" style="color: #666; transition: color 0.3s; text-decoration: none;">Terms of Service</a>
+                        <a href="/privacy-policy" style="color:inherit;text-decoration:none;">Privacy Policy</a>
+                        <a href="/terms-of-service" style="color:inherit;text-decoration:none;">Terms of Service</a>
                     </div>
                 </div>
             </div>

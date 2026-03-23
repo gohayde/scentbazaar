@@ -11,7 +11,24 @@
       "Bash(echo \"✓ $file \\(dates added\\)\")",
       "Bash(fi)",
       "Bash(grep -ln \"review\\\\|testimonial\" \"m:\\\\Scent Bazaar\\\\ScentBazaar Website\"/*.html)",
-      "Bash(grep -l \"fragrance-oil-supplier-dubai.*Global Export\" *.html)"
+      "Bash(grep -l \"fragrance-oil-supplier-dubai.*Global Export\" *.html)",
+      "Bash(curl -sI https://scentbazaar.co/)",
+      "Bash(curl -s https://scentbazaar.co/ -o C:/temp/sb_home.html)",
+      "Bash(mkdir -p C:/temp)",
+      "Bash(for url:*)",
+      "Bash(printf \"%s -> \" \"$url\")",
+      "Bash(curl -so /dev/null -w \"HTTP %{http_code} | Final: %{url_effective} | Hops: %{num_redirects}\\\\n\" -L \"$url\")",
+      "Bash(curl -s https://scentbazaar.co/perfume-oil-supplier-dubai -o C:/temp/sb_pods.html)",
+      "Bash(curl -s https://scentbazaar.co/wholesale-perfume-oil-dubai -o C:/temp/sb_wholesale.html)",
+      "Bash(curl -s https://scentbazaar.co/about-us -o C:/temp/sb_about.html)",
+      "Bash(curl -s https://scentbazaar.co/fragrance-oil-supplier-dubai -o C:/temp/sb_fragrance.html)",
+      "Bash(cwebp -version)",
+      "Bash(ffmpeg -version)",
+      "Bash(magick -version)",
+      "Bash(convert -version)"
+    ],
+    "additionalDirectories": [
+      "C:\\temp"
     ]
   }
 }
