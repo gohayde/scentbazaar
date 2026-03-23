@@ -306,6 +306,70 @@
             padding: 40px 0;
             font-size: 0.9rem
         }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 16px
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+            max-width: 860px;
+            margin: 0 auto
+        }
+
+        .faq-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden
+        }
+
+        .faq-card details {
+            padding: 20px 24px;
+            cursor: pointer
+        }
+
+        .faq-card summary {
+            font-weight: 700;
+            font-size: 1rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px
+        }
+
+        .faq-card summary::-webkit-details-marker { display: none }
+
+        .faq-card summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            flex-shrink: 0;
+            transition: transform 0.2s
+        }
+
+        .faq-card details[open] summary::after {
+            transform: rotate(45deg)
+        }
+
+        .faq-card p {
+            margin-top: 14px;
+            font-size: 0.97rem;
+            color: #444;
+            line-height: 1.7
+        }
     </style>
 </head>
 
@@ -446,6 +510,168 @@
             <iframe title="Customer Reviews" class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/n2JV7OnZcOBeCtUnjWku' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; border: none; height: 800px;'></iframe>
         </div>
     </section>
+
+    <!-- FAQ -->
+    <section class="section-bg" id="faq" style="padding:80px 0">
+        <div class="container">
+            <div style="text-align:center;max-width:700px;margin:0 auto 40px">
+                <span class="tag">About Us</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <details>
+                        <summary>Who founded Scent Bazaar and what is their background?</summary>
+                        <p>Scent Bazaar was founded in 2025 by Nawar, a qualified chemical engineer with deep expertise in fragrance chemistry, aroma compound formulation, and raw material sourcing. The business was built specifically to address the gap between what fragrance brands need — reliable, documented, technically sound supply — and what most suppliers in Dubai actually deliver. Nawar's engineering background informs everything from oil selection to compliance documentation.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>Where is Scent Bazaar based?</summary>
+                        <p>Scent Bazaar is based at Shop 47, Souq Naif, 47 Street, Naif, Deira, Dubai, UAE — in the heart of Dubai's historic fragrance district. Souq Naif has been a centre of the Arabian perfume trade for generations. Our walk-in showroom is open Monday to Saturday, 9am–10pm. You can also reach us on WhatsApp at +971 54 772 7106 for remote wholesale orders and consultations.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>What does Scent Bazaar actually sell?</summary>
+                        <p>We supply the complete ecosystem for fragrance businesses: 2,000+ concentrated perfume oils (French designer-inspired and traditional Arabic), perfumers alcohol, reed diffuser bases, cosmetic bases, glass perfume bottles, spray pumps, Zamac caps, and wholesale bakhoor. We also provide services: private label perfume manufacturing, custom fragrance blending, and contract perfume filling. Everything a fragrance brand needs, in one place.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>Who are Scent Bazaar's typical customers?</summary>
+                        <p>Our customers are B2B buyers: independent perfume brands, private label manufacturers, cosmetics companies, candle and home fragrance makers, boutique retailers, hotel and hospitality buyers, and industrial FMCG manufacturers. We also supply individual perfumers and fragrance students looking to develop skills and source quality raw materials. Our 100ml MOQ makes us accessible to brands at every stage of growth.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>How many countries does Scent Bazaar export to?</summary>
+                        <p>We export to 50+ countries across the GCC, wider Middle East, Africa, South Asia, Southeast Asia, Europe, and beyond. Every international order ships with full compliance documentation — MSDS, COA, allergen declarations, and Dangerous Goods classification where required. Our logistics team has experience with the import requirements of most major fragrance markets and can advise on destination-specific documentation before you order.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>What is the minimum order quantity at Scent Bazaar?</summary>
+                        <p>For fragrance oils, our minimum order is 100ml per scent — one of the lowest in the industry. For perfumers alcohol, we supply from 5-litre containers. For cosmetic and diffuser bases, from 5 litres. For glass bottles and caps, from 500 units. There is no minimum for a store visit or a WhatsApp consultation. We are built for brands at every scale, from solo perfumers to industrial manufacturers.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>Does Scent Bazaar supply compliance documentation with orders?</summary>
+                        <p>Yes — documentation is standard, not optional. Every order ships with a Material Safety Data Sheet (MSDS) and Certificate of Analysis (COA). Commercial orders also include allergen declarations. For export orders, we prepare all required Dangerous Goods documentation, customs certificates, and any destination-specific regulatory paperwork. This is non-negotiable because our clients cannot sell or import without it.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>How many fragrance oils does Scent Bazaar stock?</summary>
+                        <p>We stock 2,000+ fragrance oils spanning the full spectrum of global perfumery: French designer-inspired accords (floral, fruity, woody, oriental, aquatic, gourmand), traditional Arabic perfumery (pure oud, dahn al oudh, mukhallat, attar, rose taifi, saffron, amber, musk), and raw aroma chemicals for in-house formulation. The catalogue is continuously updated as new accords are developed and sourced.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>Can Scent Bazaar help me launch a perfume brand from scratch?</summary>
+                        <p>Yes, entirely. We can take you from zero — no formula, no bottle, no brand — to a shelf-ready product. Our process: scent selection or custom development, blending with perfumers alcohol, maceration, filling, crimping, labelling, and packaging. We can also advise on compliance requirements for your target markets. Many of the perfume brands operating across the GCC and internationally today built their foundations through Scent Bazaar.</p>
+                    </details>
+                </div>
+                <div class="faq-card">
+                    <details>
+                        <summary>How can I contact Scent Bazaar or place an order?</summary>
+                        <p>The fastest route is WhatsApp at <a href="https://wa.me/971547727106" style="color:var(--accent);">+971 54 772 7106</a> — send us your requirements and we will respond with pricing, availability, and documentation. You can also visit us in person at Souq Naif, Shop 47, Deira, Dubai (Monday–Saturday, 9am–10pm) to sample oils and discuss your project directly with our team. Email enquiries are also welcome at info@scentbazaar.co.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema Markup for About Page FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who founded Scent Bazaar and what is their background?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scent Bazaar was founded in 2025 by Nawar, a qualified chemical engineer with deep expertise in fragrance chemistry, aroma compound formulation, and raw material sourcing. The business was built to address the gap between what fragrance brands need — reliable, documented, technically sound supply — and what most suppliers in Dubai actually deliver."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is Scent Bazaar based?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scent Bazaar is based at Shop 47, Souq Naif, 47 Street, Naif, Deira, Dubai, UAE. Our walk-in showroom is open Monday to Saturday, 9am–10pm. Contact us on WhatsApp at +971 54 772 7106 for remote wholesale orders and consultations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does Scent Bazaar actually sell?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We supply 2,000+ concentrated perfume oils, perfumers alcohol, reed diffuser bases, cosmetic bases, glass perfume bottles, spray pumps, Zamac caps, and wholesale bakhoor. Services include private label perfume manufacturing, custom fragrance blending, and contract perfume filling."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who are Scent Bazaar's typical customers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our customers are B2B buyers: independent perfume brands, private label manufacturers, cosmetics companies, candle and home fragrance makers, boutique retailers, hotel and hospitality buyers, and industrial FMCG manufacturers. Our 100ml MOQ makes us accessible to brands at every stage of growth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many countries does Scent Bazaar export to?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We export to 50+ countries across the GCC, Middle East, Africa, South Asia, Southeast Asia, and Europe. Every international order ships with full compliance documentation — MSDS, COA, allergen declarations, and Dangerous Goods classification where required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the minimum order quantity at Scent Bazaar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For fragrance oils, our minimum order is 100ml per scent. For perfumers alcohol, from 5 litres. For cosmetic and diffuser bases, from 5 litres. For glass bottles and caps, from 500 units. We are built for brands at every scale, from solo perfumers to industrial manufacturers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Scent Bazaar supply compliance documentation with orders?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes — documentation is standard, not optional. Every order ships with MSDS and COA. Commercial orders also include allergen declarations. For export orders, we prepare all required Dangerous Goods documentation and customs certificates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many fragrance oils does Scent Bazaar stock?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We stock 2,000+ fragrance oils: French designer-inspired accords (floral, fruity, woody, oriental, aquatic, gourmand), traditional Arabic perfumery (pure oud, mukhallat, attar, rose taifi, saffron, amber, musk), and raw aroma chemicals for in-house formulation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Scent Bazaar help me launch a perfume brand from scratch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, entirely. We can take you from zero to a shelf-ready product: scent selection or custom development, blending, maceration, filling, crimping, labelling, and packaging. We advise on compliance requirements for your target markets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I contact Scent Bazaar or place an order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The fastest route is WhatsApp at +971 54 772 7106. You can also visit us in person at Souq Naif, Shop 47, Deira, Dubai (Monday–Saturday, 9am–10pm) or email info@scentbazaar.co."
+                }
+            }
+        ]
+    }
+    </script>
 
     <!-- Schema Markup for About Page -->
     <script type="application/ld+json">
