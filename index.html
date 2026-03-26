@@ -1297,6 +1297,7 @@
           "description": "Dubai's leading wholesale perfume oil supplier. Providing 2000+ French and Arabic fragrance oils, perfumers alcohol, and private label filling services.",
           "url": "https://scentbazaar.co/",
           "telephone": "+971547727106",
+          "email": "info@scentbazaar.co",
           "currenciesAccepted": "AED",
           "paymentAccepted": "Cash, Credit Card",
           "priceRange": "AED 50 - AED 5000",
@@ -1316,9 +1317,21 @@
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              "opens": "09:00",
-              "closes": "22:00"
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
+              "opens": "10:00",
+              "closes": "01:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday"],
+              "opens": "10:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday"],
+              "opens": "14:00",
+              "closes": "01:00"
             }
           ],
           "aggregateRating": {
@@ -1341,10 +1354,13 @@
         {
           "@type": "Organization",
           "@id": "https://scentbazaar.co/#scentbazaar",
-          "name": "ScentBazaar",
+          "name": "Scent Bazaar",
+          "legalName": "Scent Bazaar",
+          "description": "Dubai's leading wholesale perfume oil supplier. 2,000+ French and Arabic fragrance oils, perfumers alcohol, private label filling, and global fragrance export services.",
           "url": "https://scentbazaar.co/",
           "logo": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png",
           "telephone": "+971547727106",
+          "email": "info@scentbazaar.co",
           "foundingDate": "2025",
           "founder": { "@id": "https://scentbazaar.co/#nawar" },
           "address": {
@@ -1353,6 +1369,14 @@
             "addressLocality": "Deira",
             "addressRegion": "Dubai",
             "addressCountry": "AE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+971547727106",
+            "email": "info@scentbazaar.co",
+            "contactType": "Customer Service",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["English", "Arabic"]
           },
           "sameAs": [
             "https://www.instagram.com/scentbazaar/",
@@ -1368,15 +1392,31 @@
           "jobTitle": "Founder & Chemical Engineer",
           "description": "Qualified chemical engineer and founder of Scent Bazaar. Specialises in fragrance chemistry, aroma compound formulation, and custom perfume development.",
           "worksFor": { "@id": "https://scentbazaar.co/#scentbazaar" },
-          "founder": { "@id": "https://scentbazaar.co/#scentbazaar" },
+          "foundedOrganization": { "@id": "https://scentbazaar.co/#scentbazaar" },
+          "knowsAbout": [
+            "Fragrance chemistry",
+            "Aroma compound formulation",
+            "Perfumers alcohol",
+            "Private label perfume manufacturing",
+            "Wholesale fragrance supply"
+          ],
           "url": "https://scentbazaar.co/about-us"
         },
         {
           "@type": "WebSite",
           "@id": "https://scentbazaar.co/#website",
           "url": "https://scentbazaar.co/",
-          "name": "ScentBazaar",
-          "publisher": { "@id": "https://scentbazaar.co/#scentbazaar" }
+          "name": "Scent Bazaar",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://scentbazaar.co/#scentbazaar" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://scentbazaar.co/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
         },
         {
           "@type": "FAQPage",
@@ -1386,7 +1426,7 @@
               "name": "Where is Scent Bazaar located?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We are situated at Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai. As a leading hub for fragrance supply, our store is easily accessible for both retail sampling and bulk B2B consultations."
+                "text": "We are situated at Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai. Open daily — Mon–Thu, Sat–Sun: 10am–1am; Fri: 10am–1pm and 2pm–1am. Easily accessible for both retail sampling and bulk B2B consultations."
               }
             },
             {
@@ -1469,46 +1509,6 @@
                 "text": "Yes. We offer free samples of up to 12 fragrance oil varieties so you can check quality before committing. Our MOQ is 100ml per oil, which also allows you to test at minimal cost before scaling. This is perfect for DIY perfumers and emerging brands who want to experiment without major investment."
               }
             },
-            {
-              "@type": "Question",
-              "name": "What is the difference between Eau de Parfum and Eau de Toilette?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Eau de Parfum (EDP) contains 15–20% fragrance oil concentrate and typically lasts 6–8 hours on skin. Eau de Toilette (EDT) contains 5–15% and lasts 3–6 hours. For oil-based attars, no alcohol is needed — the concentrated oil is applied directly to pulse points and can last 8–12 hours. We supply the raw oils and perfumers alcohol for both formats."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I mix French fragrance oils with Arabic oud?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, absolutely. French and Arabic oils blend beautifully — oud's deep, woody character pairs well with floral or fruity French accords to create distinctive hybrid profiles. Our perfumers can advise on blend ratios during your Deira store visit or via WhatsApp consultation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you offer samples or small quantities for testing?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We offer free samples of up to 12 fragrance oil varieties so you can evaluate quality and scent profiles before committing to a wholesale order. Our 100ml MOQ also means your first real order is low-risk — perfect for emerging brands building a range without over-committing capital."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What certifications do I need to export fragrance oils from Dubai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For international export you need MSDS (Material Safety Data Sheet) and COA (Certificate of Analysis) from your supplier — which we provide as standard with every order. Fragrance oils classified as hazardous goods also require Dangerous Goods (DG) documentation, which our logistics team prepares for all applicable shipments."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does homemade or brand perfume last after mixing with alcohol?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "After mixing fragrance oil with perfumers alcohol, the blend should be left to macerate for 48–72 hours before finalising. Once properly aged, a well-formulated EDP will last 6–8 hours on skin, while an Extrait de Parfum (25%+ oil) can last 12 hours or more. Shelf life after bottling is typically 12–24 months when stored away from heat and light."
-              }
-            }
           ]
         }
       ]
@@ -1527,6 +1527,37 @@
         {"@type":"ListItem","position":4,"name":"Bakhoor Supplier Dubai","url":"https://scentbazaar.co/bakhoor-supplier-dubai"},
         {"@type":"ListItem","position":5,"name":"Perfume Store Deira Dubai","url":"https://scentbazaar.co/perfume-store-deira"}
       ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://scentbazaar.co/#webpage",
+      "url": "https://scentbazaar.co/",
+      "name": "Perfume Oil Supplier Dubai | Wholesale Fragrance – Scent Bazaar",
+      "description": "Wholesale perfume oils, private label fragrances & perfumers alcohol in Dubai. 2,000+ scents. Serving 50+ countries. Visit Deira showroom or order online.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://scentbazaar.co/#website" },
+      "about": { "@id": "https://scentbazaar.co/#scentbazaar" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-03-26",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scentbazaar.co/" }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".intro-text"]
+      }
     }
     </script>
 </head>
@@ -1614,7 +1645,7 @@
                 <li>Services: Wholesale supply, private label, contract filling, custom blending</li>
                 <li>Compliance: MSDS &amp; CoA available on request</li>
                 <li>172 verified 5-star reviews from wholesale buyers</li>
-                <li>Open Mon–Sat, 9am–10pm | WhatsApp: +971547727106</li>
+                <li>Open daily 10am–1am (Fri break 1pm–2pm) | WhatsApp: +971547727106</li>
             </ul>
         </div>
     </section>
@@ -1893,7 +1924,7 @@
                     <div class="store-contact">
                         <h3>Store Details</h3>
                         <p><strong>Address:</strong> Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai</p>
-                        <p><strong>Timing:</strong> Mon–Sat 9am–10pm (WhatsApp available 24/7)</p>
+                        <p><strong>Timing:</strong> Daily 10am–1am | Fri: 10am–1pm, 2pm–1am (WhatsApp available 24/7)</p>
                         <p><strong>Phone:</strong> <a href="tel:+971547727106"
                                 style="color:inherit;text-decoration:none">+971 54 772 7106</a></p>
                     </div>
@@ -1919,7 +1950,7 @@
                 <div class="faq-card">
                     <details>
                         <summary>Where is Scent Bazaar located?</summary>
-                        <p>We are situated at <strong>Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai</strong>, in the heart of Dubai's historic fragrance district. Souq Naif has been the centre of Arabian perfume trading for generations, making it an ideal location for a wholesale fragrance supplier of our scale. Our showroom is open Monday to Saturday, 9am–10pm, and is fully set up for walk-in B2B consultations, live scent sampling, and bulk order discussions. Whether you are an independent perfumer, a private label brand owner, or a procurement manager for a large manufacturer, you are welcome to visit in person. For those unable to travel to Dubai, our team is available for remote wholesale consultations via WhatsApp at +971 54 772 7106 and by email at info@scentbazaar.co.</p>
+                        <p>We are situated at <strong>Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai</strong>, in the heart of Dubai's historic fragrance district. Souq Naif has been the centre of Arabian perfume trading for generations, making it an ideal location for a wholesale fragrance supplier of our scale. Our showroom is open daily (Mon–Thu, Sat–Sun: 10am–1am; Fri: 10am–1pm and 2pm–1am), and is fully set up for walk-in B2B consultations, live scent sampling, and bulk order discussions. Whether you are an independent perfumer, a private label brand owner, or a procurement manager for a large manufacturer, you are welcome to visit in person. For those unable to travel to Dubai, our team is available for remote wholesale consultations via WhatsApp at +971 54 772 7106 and by email at info@scentbazaar.co.</p>
                     </details>
                 </div>
                 <div class="faq-card">

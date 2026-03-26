@@ -1,0 +1,368 @@
+{
+  "_instructions": "Each top-level key identifies the target page and what action to take. Replace or merge these blocks into the corresponding page's existing JSON-LD. All blocks use https://schema.org and absolute URLs.",
+
+  "homepage__FIX__websiteWithSearchAction": {
+    "_target": "https://scentbazaar.co/",
+    "_action": "REPLACE the existing WebSite node inside the @graph with this corrected version",
+    "_priority": "HIGH",
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://scentbazaar.co/#website",
+    "url": "https://scentbazaar.co/",
+    "name": "Scent Bazaar",
+    "inLanguage": "en",
+    "publisher": {
+      "@id": "https://scentbazaar.co/#scentbazaar"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://scentbazaar.co/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  "homepage__FIX__organizationCorrected": {
+    "_target": "https://scentbazaar.co/",
+    "_action": "REPLACE the existing Organization node inside the @graph with this corrected version",
+    "_priority": "HIGH",
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://scentbazaar.co/#scentbazaar",
+    "name": "Scent Bazaar",
+    "legalName": "Scent Bazaar",
+    "url": "https://scentbazaar.co/",
+    "logo": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4ff5ebfc81fb27609e264.png",
+    "telephone": "+971547727106",
+    "email": "info@scentbazaar.co",
+    "foundingDate": "2025",
+    "description": "Dubai's leading wholesale perfume oil supplier. 2,000+ French and Arabic fragrance oils, perfumers alcohol, private label filling, and global fragrance export services.",
+    "founder": {
+      "@id": "https://scentbazaar.co/#nawar"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 47, Souq Naif, 47 St, Naif",
+      "addressLocality": "Deira",
+      "addressRegion": "Dubai",
+      "postalCode": "00000",
+      "addressCountry": "AE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971547727106",
+      "email": "info@scentbazaar.co",
+      "contactType": "Customer Service",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English", "Arabic"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/scentbazaar/",
+      "https://www.facebook.com/p/Scent-Bazaar-61582093276601/",
+      "https://www.tiktok.com/@scentbazaar",
+      "https://www.youtube.com/@scentbazaar"
+    ]
+  },
+
+  "homepage__FIX__storePostalCodeAndEmail": {
+    "_target": "https://scentbazaar.co/",
+    "_action": "ADD postalCode and email to the existing Store node's address and root properties",
+    "_priority": "MEDIUM",
+    "_note": "Merge these properties into the existing Store node. postalCode value: update to actual PO Box or district postal code if available for Naif, Deira.",
+    "email": "info@scentbazaar.co",
+    "address__addProperty": {
+      "postalCode": "00000"
+    }
+  },
+
+  "homepage__FIX__faqPageDeduped": {
+    "_target": "https://scentbazaar.co/",
+    "_action": "REPLACE the entire FAQPage block with this deduplicated version",
+    "_priority": "CRITICAL",
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is Scent Bazaar located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are situated at Shop No. 47, Souq Naif, 47 St, Naif - Deira - Dubai. Our showroom is easily accessible for both retail sampling and bulk B2B consultations. Open Monday to Saturday, 9am–10pm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer international export services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Scent Bazaar is a global exporter. We provide secure, regulated worldwide shipping for perfume oils, alcohol-based products, and raw materials to over 50 countries, including GCC, Africa, and Europe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your minimum order quantity (MOQ)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We pride ourselves on flexibility. While we cater to massive industrial orders (1000kg+), we also support emerging brands with smaller wholesale quantities starting from 100ml for oils and single cases for bottles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help launch a new perfume brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Our Private Label Solutions cover everything from custom scent blending and professional bottling to packaging design, allowing you to launch a luxury brand with ease."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your perfumers alcohol technical grade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we supply high-purity, technical-grade perfumers alcohol specifically formulated for superior scent projection, stability, and compatibility with fine fragrance concentrates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide the scent library catalogue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our complete 2,000+ fragrance oil scent library is available as both a printed catalogue and a digital PDF featuring detailed scent profiles, safety notes, and recommended applications across cosmetics, candles, diffusers, and fine fragrance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Eau de Parfum and Eau de Toilette?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eau de Parfum (EDP) contains 15–20% fragrance oil concentrate and typically lasts 6–8 hours on skin. Eau de Toilette (EDT) contains 5–15% and lasts 3–6 hours. For oil-based attars, no alcohol is needed — the concentrated oil is applied directly to pulse points and can last 8–12 hours. We supply the raw oils and perfumers alcohol for both formats."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does homemade or brand perfume last after mixing with alcohol?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After mixing fragrance oil with perfumers alcohol, the blend should be left to macerate for 48–72 hours before finalising. Once properly aged, a well-formulated EDP will last 6–8 hours on skin, while an Extrait de Parfum (25%+ oil) can last 12 hours or more. Shelf life after bottling is typically 12–24 months when stored away from heat and light."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix French fragrance oils with Arabic oud?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. French and Arabic oils blend beautifully — oud's deep, woody character pairs well with floral or fruity French accords to create distinctive hybrid profiles. Our perfumers can advise on blend ratios during your Deira store visit or via WhatsApp consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What certifications do I need to export fragrance oils from Dubai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For international export you need MSDS (Material Safety Data Sheet) and COA (Certificate of Analysis) from your supplier — which we provide as standard with every order. Fragrance oils classified as hazardous goods also require Dangerous Goods (DG) documentation, which our logistics team prepares for all applicable shipments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer samples or small quantities for testing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer free samples of up to 12 fragrance oil varieties so you can evaluate quality and scent profiles before committing to a wholesale order. Our 100ml MOQ also means your first real order is low-risk — perfect for emerging brands building a range without over-committing capital."
+        }
+      }
+    ]
+  },
+
+  "homepage__NEW__webPageSchema": {
+    "_target": "https://scentbazaar.co/",
+    "_action": "ADD this block — either standalone or merged into the @graph",
+    "_priority": "MEDIUM",
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://scentbazaar.co/#webpage",
+    "url": "https://scentbazaar.co/",
+    "name": "Perfume Oil Supplier Dubai | Wholesale Fragrance – Scent Bazaar",
+    "description": "Wholesale perfume oils, private label fragrances & perfumers alcohol in Dubai. 2,000+ scents. Serving 50+ countries. Visit Deira showroom or order online.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@id": "https://scentbazaar.co/#website"
+    },
+    "about": {
+      "@id": "https://scentbazaar.co/#scentbazaar"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png",
+      "width": 1200,
+      "height": 630
+    },
+    "dateModified": "2026-03-23",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scentbazaar.co/"
+        }
+      ]
+    }
+  },
+
+  "wholesale__NEW__serviceWithOffer": {
+    "_target": "https://scentbazaar.co/wholesale-perfume-oil-dubai",
+    "_action": "ADD the offers property to the existing Service node in @graph Block 1",
+    "_priority": "MEDIUM",
+    "_note": "Merge the offers property into the existing Service node",
+    "offers": {
+      "@type": "Offer",
+      "seller": {
+        "@id": "https://scentbazaar.co/#scentbazaar"
+      },
+      "priceCurrency": "AED",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "50",
+        "maxPrice": "5000",
+        "priceCurrency": "AED"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 100,
+        "unitCode": "MLT",
+        "unitText": "ml"
+      },
+      "availability": "https://schema.org/InStock",
+      "areaServed": "Worldwide"
+    }
+  },
+
+  "wholesale__NEW__productSchema": {
+    "_target": "https://scentbazaar.co/wholesale-perfume-oil-dubai",
+    "_action": "ADD as a new standalone JSON-LD block on the page",
+    "_priority": "HIGH",
+    "_note": "Product schema enables price/availability rich results for product category pages",
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Wholesale Perfume Oil",
+    "description": "Concentrated French and Arabic perfume oils for wholesale from 100ml. Over 2,000 fragrance profiles. MSDS and COA included with every order.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Scent Bazaar"
+    },
+    "manufacturer": {
+      "@id": "https://scentbazaar.co/#scentbazaar"
+    },
+    "url": "https://scentbazaar.co/wholesale-perfume-oil-dubai",
+    "image": "https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png",
+    "category": "Fragrance Oil",
+    "offers": {
+      "@type": "AggregateOffer",
+      "offerCount": "2000",
+      "lowPrice": "50",
+      "highPrice": "5000",
+      "priceCurrency": "AED",
+      "seller": {
+        "@id": "https://scentbazaar.co/#scentbazaar"
+      },
+      "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "currency": "AED"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "AE"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          },
+          "cutoffTime": "17:00:00Z",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 2,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "172",
+      "reviewCount": "172"
+    }
+  },
+
+  "aboutPage__FIX__personFounderRelationship": {
+    "_target": "https://scentbazaar.co/about-us",
+    "_action": "REPLACE the Person block with this corrected version",
+    "_priority": "MEDIUM",
+    "_note": "Moves founder relationship to foundedOrganization on Person (correct direction), removes incorrect founder property from Person node",
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://scentbazaar.co/#nawar",
+    "name": "Nawar Mohammed",
+    "jobTitle": "Founder & Chemical Engineer",
+    "description": "Qualified chemical engineer and founder of Scent Bazaar. Specialises in fragrance chemistry, aroma compound formulation, and custom perfume development.",
+    "url": "https://scentbazaar.co/about-us",
+    "worksFor": {
+      "@id": "https://scentbazaar.co/#scentbazaar"
+    },
+    "foundedOrganization": {
+      "@id": "https://scentbazaar.co/#scentbazaar"
+    },
+    "knowsAbout": [
+      "Fragrance chemistry",
+      "Aroma compound formulation",
+      "Perfumers alcohol",
+      "Private label perfume manufacturing",
+      "Wholesale fragrance supply"
+    ]
+  },
+
+  "aboutPage__FIX__dateModified": {
+    "_target": "https://scentbazaar.co/about-us",
+    "_action": "UPDATE dateModified on the AboutPage block to reflect last actual modification",
+    "_priority": "MEDIUM",
+    "_note": "Current dateModified equals datePublished (2026-03-17). Update dateModified to the actual last edit date.",
+    "dateModified": "2026-03-23"
+  },
+
+  "allServicePages__NEW__webPageTemplate": {
+    "_target": "All interior service/product pages",
+    "_action": "ADD a WebPage block to each service page. Customise name, description, url, and dateModified per page.",
+    "_priority": "LOW",
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "REPLACE_WITH_PAGE_URL",
+    "name": "REPLACE_WITH_PAGE_TITLE",
+    "description": "REPLACE_WITH_META_DESCRIPTION",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@id": "https://scentbazaar.co/#website"
+    },
+    "dateModified": "REPLACE_WITH_ISO_DATE",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".intro-text"]
+    }
+  }
+}
