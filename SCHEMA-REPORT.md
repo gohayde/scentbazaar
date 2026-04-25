@@ -197,7 +197,7 @@ No Microdata or RDFa was found on any page. All schema markup uses JSON-LD forma
 12. **`Person` missing `knowsAbout`.** Adds topical authority.
 13. **`WebSite` missing `inLanguage`.** Clarifies content language to crawlers.
 14. **No `Product` schema anywhere.** As a product-selling business (perfume oils, bottles, alcohol), key product category pages could carry `Product` schema with `Offer` for price signals. This is a significant missed rich result opportunity.
-15. **No `Review` or linked review markup.** The Store has an `aggregateRating` of 4.9 (172 reviews) but individual reviews are not marked up, reducing review snippet depth.
+15. **No `Review` or linked review markup.** The Store has an `aggregateRating` of 4.9 (162 reviews) but individual reviews are not marked up, reducing review snippet depth.
 
 ---
 

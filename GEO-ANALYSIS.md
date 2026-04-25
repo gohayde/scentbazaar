@@ -83,7 +83,7 @@ Gaps:
 | TikTok | PRESENT | Low | @scentbazaar in schema. Minimal AI citation correlation. |
 | Facebook | PRESENT | Low | Page referenced in schema. |
 | LinkedIn | NOT PRESENT | Medium | No LinkedIn URL in schema sameAs or llms.txt. Valued by Bing Copilot for B2B authority. |
-| Google Business Profile | PRESENT implied | High | 172 verified reviews, 4.9 rating in AggregateRating schema. Google Maps link present. |
+| Google Business Profile | PRESENT implied | High | 162 verified reviews, 4.9 rating in AggregateRating schema. Google Maps link present. |
 
 Brand Signal Gap Score: 40/100. Wikipedia, Reddit, and LinkedIn are the three highest-impact missing signals. The YouTube presence is a genuine asset if the channel contains substantive content, but activity depth was not verifiable during this audit.
 
@@ -99,7 +99,7 @@ Optimal AI-citable passage characteristics: 134-167 words, self-contained, direc
 - FAQ answers average 50-80 words each - below the optimal 134-word threshold
 - H1 is functional but not a question: Wholesale Perfume Oil and Fragrance Supplier - Dubai
 - Promotional section headings (One-Stop Scent Supply Ecosystem, etc.) are not AI-citable
-- Stats present (2,000+ oils, 50+ countries, 172 reviews, 4.9 rating) but not sourced or dated
+- Stats present (2,000+ oils, 50+ countries, 162 reviews, 4.9 rating) but not sourced or dated
 
 ### About Us (about-us.html) - Citability score: 62/100
 

@@ -678,12 +678,17 @@
       "@graph": [
         {
           "@type": "Service",
-          "dateModified": "2026-03-23",
           "name": "Custom Perfume Blending Dubai",
-          "provider": { "@id": "https://scentbazaar.co/#scentbazaar" },
-          "serviceType": "Bespoke Fragrance Creation",
-          "description": "Bespoke fragrance creation and custom blending in Dubai. Tailored formulations from 2000+ raw materials for brands, retailers and perfumers.",
-          "areaServed": "Worldwide",
+          "provider": {
+            "@type": "Organization",
+            "name": "Scent Bazaar",
+            "url": "https://scentbazaar.co"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "United Arab Emirates"
+          },
+          "description": "Create a custom perfume in Dubai with blending, formula refinement and scalable production support. Private sessions for brands and startups.",
           "url": "https://scentbazaar.co/custom-perfume-blending-dubai"
         },
         {
