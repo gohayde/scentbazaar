@@ -1,12 +1,26 @@
 # Scent Bazaar
 
-> Scent Bazaar is a B2B wholesale perfume oil and fragrance ingredient supplier
-> based in Naif Souq, Deira, Dubai, UAE. The company supplies 2,000+ perfume oils,
-> perfumers alcohol, fragrance bases, empty bottles, bakhoor, and offers private
-> label and OEM fragrance manufacturing services. It exports to 50+ countries and
-> holds 162 verified 5-star reviews.
+> B2B wholesale perfume oil and fragrance supplier based in Souq Naif, Deira, Dubai, UAE.
+> Founded 2025 by Nawar Mohammed (chemical engineer).
 
-license: https://scentbazaar.co/terms-of-service
+## Products
+- 2,000+ concentrated fragrance oils (French inspirations, Arabic masterpieces, single notes)
+- Perfumers alcohol (technical grade, various volumes)
+- Perfume packaging (glass bottles, caps, spray pumps)
+- Bakhoor (traditional Arabic incense)
+- Candle fragrance oils, reed diffuser bases, cosmetic bases, perfume bases
+
+## Services
+- Wholesale distribution (100ml MOQ)
+- Private label perfume manufacturing (3–11 week turnaround)
+- Custom perfume blending
+- Contract filling and crimping
+- Global export and logistics (50+ countries served)
+
+## Credentials
+- 162 verified five-star Google reviews
+- MSDS and COA provided as standard
+- IFRA-compliant formulations available
 
 ## Key Pages
 
@@ -46,8 +60,6 @@ license: https://scentbazaar.co/terms-of-service
 - Address: Souq Naif, Shop 47, Deira, Dubai, UAE
 - Hours: Monday–Saturday, 9:00 AM – 10:00 PM
 
+## Licensing
 
-
-
-
-
+RSL 1.0

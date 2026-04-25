@@ -15,7 +15,7 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://reputationhub.site; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://assets.cdn.filesafe.space https://www.google.com; frame-src https://www.google.com https://reputationhub.site; connect-src 'self' https://www.google-analytics.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://reputationhub.site; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://assets.cdn.filesafe.space https://www.google.com; frame-src https://www.google.com https://reputationhub.site; connect-src 'self' https://www.google-analytics.com;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Scent Bazaar | Perfume Oil Supplier Dubai Since 2025</title>
     <link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b61f145b89c74e8b8ff2e8.png">
@@ -36,341 +36,118 @@
     <meta name="twitter:title" content="About Scent Bazaar | Fragrance Supplier Dubai">
     <meta name="twitter:description" content="Meet Scent Bazaar, Dubai's wholesale fragrance partner for 2,000+ oils, private label projects and exports to 50+ countries. Learn how we support brands.">
     <meta name="robots" content="index, follow">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://reputationhub.site">
     <link rel="preconnect" href="https://assets.cdn.filesafe.space" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
-
-        :root {
-            --accent: #ff4700;
-            --bg: #fff7ea;
-            --olive: #616342;
-            --white: #ffffff;
-            --dark: #1a1a1a;
-            --shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1)
-        }
-
-        html {
-            scroll-behavior: smooth
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            background: var(--bg);
-            line-height: 1.7;
-            overflow-x: hidden
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'DM Serif Display', serif;
-            line-height: 1.25;
-            color: var(--dark)
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.6rem);
-            font-weight: 800
-        }
-
-        h2 {
-            font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-            font-weight: 700;
-            margin-bottom: 1rem
-        }
-
-        h3 {
-            font-size: 1.15rem;
-            font-weight: 600
-        }
-
-        p {
-            color: #444;
-            font-size: 1.05rem;
-            margin-bottom: 24px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-        }
-
-        ul,
-        ol {
-            margin-left: 20px;
-            margin-bottom: 24px;
-            color: #444;
-            font-size: 1.05rem;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px
-        }
-
-        section {
-            padding: 80px 0
-        }
-
-        .section-white {
-            background: var(--white)
-        }
-
-        .section-bg {
-            background: var(--bg)
-        }
-
-        .header {
-            background: linear-gradient(135deg, var(--accent) 0%, #d63a00 100%);
+    <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+background: linear-gradient(135deg, var(--accent) 0%, #d63a00 100%);
             color: white;
             padding: 100px 0;
             text-align: center
-        }
-
         .header h1 {
             color: white;
             margin-bottom: 16px
-        }
-
         .header p {
             color: rgba(255,255,255,0.95);
-            font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto
-        }
-
         .team-grid {
-            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
             margin-top: 40px
-        }
-
         .team-member {
             background: white;
             padding: 30px;
-            border-radius: 12px;
             box-shadow: var(--shadow);
             text-align: center
-        }
-
         .team-member img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 20px;
             object-fit: cover
-        }
-
         .team-member h3 {
-            color: var(--accent);
             margin-bottom: 8px
-        }
-
         .team-member .title {
             color: var(--olive);
-            font-size: 0.95rem;
-            margin-bottom: 12px
-        }
-
         .team-member p {
-            font-size: 0.95rem;
             color: #666
-        }
-
         .timeline {
             margin-top: 40px
-        }
-
         .timeline-item {
-            display: grid;
             grid-template-columns: 150px 1fr;
-            gap: 40px;
             margin-bottom: 40px;
             padding-bottom: 40px;
             border-bottom: 1px solid #eee
-        }
-
         .timeline-year {
-            font-size: 1.5rem;
             font-weight: bold;
-            color: var(--accent)
-        }
-
         .timeline-content h3 {
-            color: var(--dark);
             margin-bottom: 8px
-        }
-
         .stats {
-            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
             margin: 60px 0
-        }
-
         .stat-box {
-            text-align: center;
             padding: 30px;
             background: white;
-            border-radius: 12px;
             box-shadow: var(--shadow)
-        }
-
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: var(--accent);
             margin-bottom: 8px
-        }
-
         .stat-label {
-            color: #666;
             font-size: 0.95rem
-        }
-
         .cta-button {
-            display: inline-block;
-            background: var(--accent);
             color: white;
-            padding: 14px 32px;
             border-radius: 6px;
             margin-top: 20px;
             transition: background 0.3s
-        }
-
         .cta-button:hover {
             background: #d63a00
-        }
-
         .page-meta {
-            text-align: center;
-            color: #999;
-            font-size: 0.9rem;
             padding-top: 20px;
             border-top: 1px solid #eee;
             margin-top: 40px
-        }
-
         nav {
-            display: flex;
-            justify-content: center;
             gap: 30px;
             padding: 20px 0;
             background: white;
             box-shadow: var(--shadow)
-        }
-
         nav a {
-            color: var(--dark);
-            font-size: 0.95rem;
             transition: color 0.3s
-        }
-
         nav a:hover {
-            color: var(--accent)
-        }
-
         footer {
-            background: var(--dark);
             color: white;
-            text-align: center;
             padding: 40px 0;
             font-size: 0.9rem
-        }
-
-        .tag {
-            display: inline-block;
-            background: var(--accent);
             color: white;
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
             letter-spacing: 0.05em;
-            text-transform: uppercase;
             margin-bottom: 16px
-        }
-
-        .faq-grid {
-            display: grid;
-            gap: 16px;
             max-width: 860px;
             margin: 0 auto
-        }
-
-        .faq-card {
-            background: #fff;
-            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid rgba(0,0,0,0.06);
             overflow: hidden
-        }
-
         .faq-card details {
             padding: 20px 24px;
             cursor: pointer
-        }
-
         .faq-card summary {
-            font-weight: 700;
-            font-size: 1rem;
-            list-style: none;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
             gap: 16px
-        }
-
         .faq-card summary::-webkit-details-marker { display: none }
-
         .faq-card summary::after {
-            content: '+';
             font-size: 1.4rem;
-            color: var(--accent);
             flex-shrink: 0;
             transition: transform 0.2s
-        }
-
         .faq-card details[open] summary::after {
             transform: rotate(45deg)
-        }
-
         .faq-card p {
             margin-top: 14px;
             font-size: 0.97rem;
-            color: #444;
             line-height: 1.7
-        }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -761,6 +538,17 @@
             "Private label perfume manufacturing",
             "Wholesale fragrance supply"
         ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scentbazaar.co/" },
+        { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://scentbazaar.co/about-us" }
+      ]
     }
     </script>
 

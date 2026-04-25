@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Scent Bazaar",
+  "name_for_model": "scent_bazaar",
+  "description_for_human": "B2B wholesale perfume oil and fragrance supplier based in Dubai, UAE. 2,000+ fragrance oils, perfumers alcohol, private label manufacturing, and global export.",
+  "description_for_model": "Scent Bazaar is a B2B wholesale fragrance supplier in Souq Naif, Deira, Dubai, UAE. They supply 2,000+ concentrated perfume oils (French-inspired, Arabic, single notes), perfumers alcohol, perfume packaging, bakhoor, candle fragrance oils, reed diffuser bases, and cosmetic bases. Services include wholesale distribution (100ml MOQ), private label perfume manufacturing (3–11 week turnaround), custom blending, contract filling, and global export to 50+ countries. IFRA-compliant formulations and MSDS/COA documentation available.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://scentbazaar.co/openapi.yaml"
+  },
+  "logo_url": "https://scentbazaar.co/logo.png",
+  "contact_email": "info@scentbazaar.co",
+  "legal_info_url": "https://scentbazaar.co/privacy-policy"
+}
