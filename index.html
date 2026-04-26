@@ -364,404 +364,7 @@
   }
 ]
 </script>
-  <style>
-font-size: 1.05rem
-            display: block
-        .btn-white {
-            box-shadow: var(--shadow)
-        .btn-white:hover {
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--white)
-        .logo span {
-        .header.scrolled .logo {
-        .header-tagline {
-            color: rgba(255, 255, 255, .7);
-            letter-spacing: 1px;
-            margin-top: -2px
-        .header.scrolled .header-tagline {
-            color: var(--olive)
-            white-space: nowrap;
-        @media(min-width:768px) {
-                display: inline-flex
-            gap: 5px;
-            padding: 5px
-            width: 24px;
-            transition: all .3s
-            background: var(--dark)
-        @media(max-width:768px) {
-                display: flex
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            padding-top: 100px;
-            /* Dark base depth */
-        .hero::before {
-            background: linear-gradient(160deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.2) 100%);
-        .hero-bg-img {
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.7) contrast(1.2) saturate(0.9);
-        .hero .container {
-            z-index: 3;
-        .hero-content {
-            max-width: 720px
-        .hero h1 {
-            margin-bottom: 24px
-        .hero h1 span {
-        .hero p {
-            margin-bottom: 36px;
-            max-width: 600px
-        .hero-btns {
-            flex-wrap: wrap;
-            gap: 16px
-        .hero-stat {
-            margin-top: 56px;
-            padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, .15)
-        .hero-stat div {
-            text-align: center
-        .hero-stat strong {
-            font-size: 1.8rem;
-        .hero-stat span {
-            font-size: .8rem;
-            color: rgba(255, 255, 255, .6);
-            letter-spacing: 1px;
-            text-transform: uppercase
-        /* REDESIGNED SERVICES GRID */
-        .services-grid {
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 48px
-        .service-card {
-            height: 420px;
-            border-radius: 16px;
-            justify-content: flex-end;
-            align-items: flex-start;
-            text-align: left;
-            padding: 40px;
-            transition: all 0.4s ease;
-            background-size: cover;
-            background-position: center;
-        .service-card::before {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        .service-card:hover::before {
-            background: linear-gradient(to top, var(--accent) 0%, rgba(255, 71, 0, 0.8) 100%);
-            opacity: 0.95;
-        .service-card-content {
-        .service-card:hover .service-card-content {
-            transform: translateY(-15px);
-        .service-card h3 {
-            font-size: 1.75rem;
-            margin-bottom: 8px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        .service-card p {
-            max-height: 0;
-            transition: all 0.4s ease;
-            line-height: 1.5;
-        .service-card .service-btn {
-            margin-top: 12px;
-            padding: 10px 24px;
-            letter-spacing: 1px;
-            transform: translateY(10px);
-            transition: all 0.4s ease;
-        .service-card:hover p,
-        .service-card:hover .service-btn {
-            max-height: 100px;
-            transform: translateY(0);
-        .service-card:hover p {
-        /* SCENT LIBRARY */
-        .scent-section {
-            overflow: hidden
-        .scent-grid {
-            gap: 48px;
-            margin-top: 40px
-        .scent-img {
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-        .scent-img img {
-            height: 600px;
-            object-fit: cover;
-            filter: grayscale(20%) contrast(1.1);
-            transition: filter .5s;
-        .scent-img:hover img {
-            filter: grayscale(0%) contrast(1);
-        .scent-text ul {
-            margin: 28px 0;
-            gap: 12px;
-        .scent-text li {
-            gap: 12px;
-        .scent-text li::before {
-            content: '✓';
-            font-weight: 800;
-        @media(max-width:768px) {
-            .scent-grid {
-                grid-template-columns: 1fr
-            .scent-img img {
-                height: 280px
-        /* PRIVATE LABEL */
-        .pl-grid {
-            gap: 48px;
-            margin-top: 40px
-        .pl-img {
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg)
-        .pl-img img {
-            height: 550px;
-            object-fit: cover;
-            transition: transform .5s
-        .pl-img:hover img {
-            transform: scale(1.03)
-        .pl-list {
-            margin: 28px 0;
-            gap: 12px;
-        .pl-list li {
-            gap: 12px;
-        .pl-list li::before {
-            content: '✓';
-            font-weight: 800;
-        @media(max-width:768px) {
-            .pl-grid {
-                grid-template-columns: 1fr
-            .pl-img img {
-                height: 280px
-        /* RAW MATERIALS */
-        .raw-grid {
-            gap: 48px;
-            margin-top: 40px
-        .raw-img {
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg)
-        .raw-img img {
-            height: 550px;
-            object-fit: cover;
-            transition: transform .5s
-        .raw-img:hover img {
-            transform: scale(1.03)
-        .raw-tags {
-            gap: 12px;
-            margin-top: 24px
-        .raw-tag {
-            background: transparent;
-            border: 1px solid var(--border);
-            border-radius: 0;
-            padding: 10px 24px;
-            font-size: .85rem;
-            letter-spacing: 1px;
-            transition: all .3s;
-        .raw-tag:hover {
-            border-color: var(--dark);
-            color: var(--white)
-        @media(max-width:768px) {
-            .raw-grid {
-                grid-template-columns: 1fr
-            .raw-img img {
-                height: 280px
-        /* STORE VISIT */
-        .store-grid {
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 48px;
-            align-items: flex-start;
-            margin-top: 32px
-        .store-img {
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg)
-        .store-img img {
-            height: 350px;
-            object-fit: cover
-        .store-map {
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-        .store-map iframe {
-        gmpx-store-locator {
-            height: 480px;
-            --gmpx-color-surface: #fff;
-            --gmpx-color-on-surface: #212121;
-            --gmpx-color-on-surface-variant: #757575;
-            --gmpx-color-primary: #ff4700;
-            --gmpx-color-outline: #e0e0e0;
-            --gmpx-fixed-panel-width-row-layout: 28.5em;
-            --gmpx-fixed-panel-height-column-layout: 65%;
-            --gmpx-font-family-base: 'Inter', sans-serif;
-            --gmpx-font-family-headings: 'DM Serif Display', serif;
-            --gmpx-font-size-base: 0.875rem;
-            --gmpx-hours-color-open: #188038;
-            --gmpx-hours-color-closed: #d50000;
-            --gmpx-rating-color: #ffb300;
-            --gmpx-rating-color-empty: #e0e0e0;
-        .store-highlights {
-            margin: 0 0 24px;
-        .highlight {
-            align-items: flex-start;
-            gap: 14px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: transparent;
-        .highlight:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        .highlight-icon {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 71, 0, 0.08);
-        .highlight:hover .highlight-icon {
-        .highlight-info strong {
-            line-height: 1.2;
-        .highlight-info span {
-            font-weight: 400;
-        .store-contact {
-            margin-top: 0;
-        .store-contact h3 {
-            font-size: 1.6rem;
-            margin-bottom: 16px;
-        .store-contact p {
-            margin-bottom: 8px;
-        .store-btns {
-            margin-top: 32px;
-            gap: 20px;
-        @media(max-width:768px) {
-            .store-grid {
-                grid-template-columns: 1fr
-        /* WHATSAPP INDICATOR */
-            bottom: 40px;
-            right: 100px;
-            box-shadow: var(--shadow);
-            z-index: 9998;
-            pointer-events: none;
-            transition: all 0.4s ease;
-        .wa-indicator::after {
-            right: -8px;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-left: 8px solid var(--accent);
-        .wa-float:hover+.wa-indicator,
-        body.scrolled .wa-indicator {
-        /* FAQ CARDS */
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-            align-items: start;
-            background: var(--white);
-            border-radius: 16px;
-            padding: 4px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        .faq-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        .faq-card details {
-            padding: 16px;
-        .faq-card summary {
-            justify-content: space-between;
-        .faq-card summary::after {
-            transition: transform 0.3s;
-        .faq-card details[open] summary::after {
-        .faq-card p {
-            line-height: 1.6;
-            border-top: 1px solid #eee;
-            padding-top: 16px;
-        .footer-social {
-            margin-top: 24px;
-        .social-icon {
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        .social-icon svg {
-            width: 20px;
-            height: 20px;
-        .social-icon:hover {
-            transform: translateY(-8px) scale(1.1);
-            border-color: var(--accent);
-            box-shadow: 0 10px 25px rgba(255, 71, 0, 0.2);
-        /* Soulful Hover Colors */
-        .social-icon[aria-label="Instagram"]:hover {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-color: transparent;
-        .social-icon[aria-label="TikTok"]:hover {
-            background: #000;
-            border-color: #00f2ea;
-            box-shadow: 0 0 15px rgba(0, 242, 234, 0.3);
-        .social-icon[aria-label="Facebook"]:hover {
-            background: #1877F2;
-            border-color: #1877F2;
-        .social-icon[aria-label="YouTube"]:hover {
-            background: #FF0000;
-            border-color: #FF0000;
-        .social-icon[aria-label="WhatsApp"]:hover {
-            background: #25D366;
-            border-color: #25D366;
-            padding: 30px 0;
-            letter-spacing: 1px;
-        @media(max-width:992px) {
-                gap: 50px;
-        @media(max-width:768px) {
-                grid-template-columns: 1fr 1fr
-            .hero-stat {
-                gap: 20px
-        @media(max-width:480px) {
-                grid-template-columns: 1fr
-            .hero-stat {
-                align-items: flex-start
-        /* Contact FLOAT */
-            bottom: 28px;
-            right: 28px;
-            z-index: 9999;
-            border-radius: 50%;
-            background: #25d366;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, .4);
-            transition: all .3s;
-            animation: waPulse 2s infinite
-            box-shadow: 0 6px 28px rgba(37, 211, 102, .5)
-            height: 30px;
-            fill: #fff
-        @keyframes waPulse {
-            0%,
-                box-shadow: 0 4px 20px rgba(37, 211, 102, .4)
-            50% {
-                box-shadow: 0 4px 30px rgba(37, 211, 102, .6)
-        /* ANIMATIONS */
-        .fade-up {
-            transform: translateY(30px);
-            transition: all .6s ease
-        .fade-up.visible {
-            transform: translateY(0)
-        /* REVIEWS SECTION */
-        .reviews-grid {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-        .review-card {
-            padding: 32px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent);
-        .review-stars {
-            color: #ffb400;
-            margin-bottom: 16px;
-            gap: 4px;
-        .review-text {
-            font-style: italic;
-        .review-author {
-            gap: 12px;
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--light);
-            border: 2px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        .author-info strong {
-        .author-info span {
-  </style>
+  
   <link rel="stylesheet" href="/styles.css">
 </head>
 
@@ -831,7 +434,7 @@ font-size: 1.05rem
                 target="_blank" rel="noopener noreferrer">Contact</a>
             <div class="hamburger" id="hamburger"
                 aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
-                <span></span><span></span><span></span>
+                <span></span><span></span>
             </div>
         </div>
     </header>
@@ -849,8 +452,11 @@ font-size: 1.05rem
                     perfume filling — shipping worldwide from Dubai.</p>
                 <div class="hero-btns">
                     <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%27m%20interested%20in%20wholesale%20inquiry"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Contact</a>
-                    <a href="#visit-store" class="btn btn-outline btn-white">Visit Our Store in Deira</a>
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Get a Quote
+                        <span class="btn-icon">↗</span>
+                    </a>
+                    <a href="#visit-store" class="btn btn-white">Visit Our Store</a>
                 </div>
                 <div class="hero-stat">
                     <div>
@@ -1010,10 +616,13 @@ font-size: 1.05rem
     <section class="section-dark scent-section" id="scent-library">
         <div class="container">
             <div class="scent-grid">
-                <div class="scent-img border-beam fade-up"><img
-                        src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd4aeba4871bf53db423.png"
-                        alt="wholesale perfume oil supplier dubai - over 2000 fragrance options" 
-                        loading="lazy" width="600" height="600"></div>
+                <div class="scent-img border-beam fade-up">
+                    <div class="scent-img-inner">
+                        <img src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd4aeba4871bf53db423.png"
+                            alt="wholesale perfume oil supplier dubai - over 2000 fragrance options"
+                            loading="lazy" width="600" height="600">
+                    </div>
+                </div>
                 <div class="scent-text fade-up">
                     <span class="tag">Dubai’s Largest Scent Library</span>
                     <h2 style="margin-bottom: 20px;">Which Fragrance Oils Can You Source From Scent Bazaar?</h2>
@@ -1026,7 +635,10 @@ font-size: 1.05rem
                         <li><strong>Ready-to-Ship</strong> – Global export infrastructure at Deira HQ</li>
                     </ul>
                     <a href="https://wa.me/971547727106?text=Hi%2C%20I%27d%20like%20to%20explore%20the%20scent%20catalogue"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Explore the Library</a>
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Explore the Library
+                        <span class="btn-icon">↗</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1048,7 +660,10 @@ font-size: 1.05rem
                         <li><strong>Scalable Production</strong> – From niche runs to bulk retail</li>
                     </ul>
                     <a href="https://wa.me/971547727106?text=Hi%2C%20I%27m%20interested%20in%20private%20label%20perfume%20filling"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Your Private Label Project</a>
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Start Your Private Label Project
+                        <span class="btn-icon">↗</span>
+                    </a>
                 </div>
                 <div class="pl-img glare-hover fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49cab7f72607c7a01c.png"
@@ -1082,7 +697,10 @@ font-size: 1.05rem
                         <li><strong>Bulk Supply</strong> – Consistent technical quality for B2B</li>
                     </ul>
                     <a href="https://wa.me/971547727106?text=Hi%2C%20I%27m%20interested%20in%20bulk%20raw%20materials%20and%20technical%20bases"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Inquire for Bulk Technical Supply</a>
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Inquire for Bulk Supply
+                        <span class="btn-icon">↗</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1164,11 +782,13 @@ font-size: 1.05rem
                         </div>
                     </div>
                     <div class="store-contact">
-                        <h3>Store Details</h3>
-                        <p><strong>Address:</strong> Shop No. 47, Souq Naif, 47 St, Naif, Deira, Dubai</p>
-                        <p><strong>Timing:</strong> Sat-Thu 8:30am-12am | Fri: 8:30am-12pm, 2pm-12am (WhatsApp available 24/7)</p>
-                        <p><strong>Phone:</strong> <a href="tel:+971547727106"
-                                style="color:inherit;text-decoration:none">+971 54 772 7106</a></p>
+                        <div class="store-contact-inner">
+                            <h3>Store Details</h3>
+                            <p><strong>Address:</strong> Shop No. 47, Souq Naif, 47 St, Naif, Deira, Dubai</p>
+                            <p><strong>Timing:</strong> Sat-Thu 8:30am-12am | Fri: 8:30am-12pm, 2pm-12am (WhatsApp available 24/7)</p>
+                            <p><strong>Phone:</strong> <a href="tel:+971547727106"
+                                    style="color:inherit;text-decoration:none">+971 54 772 7106</a></p>
+                        </div>
                     </div>
                     <!-- Google Maps Embed -->
                     <div style="margin-top:32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
@@ -1185,7 +805,7 @@ font-size: 1.05rem
                     </div>
                                         <div class="store-btns">
                         <a href="https://maps.app.goo.gl/emgwseVFB3m66nuW8" class="btn btn-primary" target="_blank"
-                            rel="noopener noreferrer">Get Directions</a>
+                            rel="noopener noreferrer">Get Directions <span class="btn-icon">↗</span></a>
                         <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar" class="btn btn-outline"
                             target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                     </div>
@@ -1387,7 +1007,7 @@ font-size: 1.05rem
 
             <div class="footer-bottom">
                 <div style="margin-bottom:16px;text-align:center;">
-                  <a href="[REPLACE_WITH_GBP_REVIEW_URL]"
+                  <a href="https://g.page/r/CTE3sGQmOfjTEAE/review"
                      target="_blank"
                      rel="noopener noreferrer"
                      style="display:inline-block;background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:10px 22px;border-radius:6px;font-size:0.85rem;text-decoration:none;font-weight:500;">
@@ -1486,12 +1106,14 @@ font-size: 1.05rem
         }, { threshold: 0.5 });
         document.querySelectorAll('.count-up').forEach(function(el) { countIo.observe(el); });
 
-        /* ── 6. MOBILE NAV ───────────────────────────────────────── */
+        /* ── 6. MOBILE NAV — hamburger morph to X ───────────────── */
         var hamburger = document.getElementById('hamburger');
         var nav = document.getElementById('nav');
         function toggleNav() {
             var isOpen = nav.classList.toggle('show');
+            hamburger.classList.toggle('active', isOpen);
             hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         }
         hamburger.addEventListener('click', toggleNav);
         hamburger.addEventListener('keydown', function(e) {
@@ -1500,7 +1122,9 @@ font-size: 1.05rem
         document.querySelectorAll('#nav a').forEach(function(a) {
             a.addEventListener('click', function() {
                 nav.classList.remove('show');
+                hamburger.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
 
