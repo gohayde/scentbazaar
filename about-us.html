@@ -194,10 +194,13 @@ background: linear-gradient(135deg, var(--accent) 0%, #d63a00 100%);
         <a href="tel:+971547727106">+971 54 772 7106</a>
     </nav>
 
-    <section class="header">
+    <section class="seo-hero about-hero-section">
         <div class="container">
-            <h1>About Scent Bazaar</h1>
-            <p>Wholesale perfume oil supplier. Deira, Dubai. Built by a chemical engineer who got tired of bad sourcing.</p>
+            <div class="seo-hero-content">
+                <span class="tag">Dubai's Fragrance Supplier</span>
+                <h1>About Scent Bazaar</h1>
+                <p>Wholesale perfume oil supplier. Deira, Dubai. Built by a chemical engineer who got tired of bad sourcing.</p>
+            </div>
         </div>
     </section>
 
@@ -602,6 +605,58 @@ background: linear-gradient(135deg, var(--accent) 0%, #d63a00 100%);
         </div>
     </footer>
     <script src="/design-enhance.js" defer></script>
+    <script>
+    (function() {
+        var prog = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var s = document.documentElement;
+            if (prog) prog.style.width = (window.scrollY / (s.scrollHeight - s.clientHeight) * 100) + '%';
+        }, { passive: true });
+        var header = document.getElementById('header');
+        var barH = (document.querySelector('.announce-bar') || {offsetHeight:36}).offsetHeight || 36;
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.scrollY > barH + 40);
+        }, { passive: true });
+        var io = new IntersectionObserver(function(e) {
+            e.forEach(function(x) { if (x.isIntersecting) { x.target.classList.add('visible'); io.unobserve(x.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.fade-up').forEach(function(el) { io.observe(el); });
+        var countIo = new IntersectionObserver(function(e) {
+            e.forEach(function(x) {
+                if (!x.isIntersecting) return;
+                var el = x.target, t = parseInt(el.dataset.target), sf = el.dataset.suffix || '', s = performance.now();
+                (function tick(n) {
+                    var p = Math.min((n-s)/1800,1), ease = 1-Math.pow(1-p,4);
+                    el.textContent = Math.floor(ease*t).toLocaleString()+sf;
+                    if(p<1) requestAnimationFrame(tick);
+                })(performance.now());
+                countIo.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.count-up').forEach(function(el) { countIo.observe(el); });
+        var hamburger = document.getElementById('hamburger');
+        var nav = document.getElementById('nav');
+        if (hamburger && nav) {
+            function toggleNav() { var o = nav.classList.toggle('show'); hamburger.setAttribute('aria-expanded', o); }
+            hamburger.addEventListener('click', toggleNav);
+            hamburger.addEventListener('keydown', function(e) { if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleNav();} });
+            document.querySelectorAll('#nav a').forEach(function(a) { a.addEventListener('click', function() { nav.classList.remove('show'); hamburger.setAttribute('aria-expanded','false'); }); });
+        }
+        var track = document.getElementById('announceTrack');
+        if (track) { var c = track.cloneNode(true); c.removeAttribute('id'); track.parentElement.appendChild(c); }
+        document.querySelectorAll('.service-card,.review-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) { var r=card.getBoundingClientRect(); card.style.setProperty('--cx',(e.clientX-r.left)+'px'); card.style.setProperty('--cy',(e.clientY-r.top)+'px'); });
+            card.addEventListener('mouseleave', function() { card.style.setProperty('--cx','-999px'); card.style.setProperty('--cy','-999px'); });
+        });
+        document.querySelectorAll('.seo-hero h1').forEach(function(h1) { var r=document.createElement('div'); r.className='hero-rule'; h1.insertAdjacentElement('afterend',r); });
+        document.querySelectorAll('.faq-card').forEach(function(c,i) { c.style.setProperty('--i',i); });
+        document.querySelectorAll('.glare-hover').forEach(function(el) {
+            el.addEventListener('mousemove', function(e) { var r=el.getBoundingClientRect(); el.style.setProperty('--gx',((e.clientX-r.left)/r.width*100)+'%'); el.style.setProperty('--gy',((e.clientY-r.top)/r.height*100)+'%'); });
+            el.addEventListener('mouseenter', function() { el.classList.add('glare-active'); });
+            el.addEventListener('mouseleave', function() { el.classList.remove('glare-active'); });
+        });
+    })();
+    </script>
 </body>
 
 </html>

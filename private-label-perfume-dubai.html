@@ -275,7 +275,29 @@ image-set(url('/images/69b4fd49cab7f72607c7a01c.webp') type('image/webp'), url('
 </head>
 
 <body>
-    <!-- HEADER -->
+    
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announce-bar" role="banner" aria-label="Site announcement">
+        <div class="announce-track" id="announceTrack">
+            <span>2,000+ Fragrance Oils</span>
+            <span class="announce-dot">&middot;</span>
+            <span>100ml MOQ</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Ships to 50+ Countries</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Deira Showroom Open Daily</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Free Samples up to 12 Oils</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Private Label in 3&ndash;11 Weeks</span>
+            <span class="announce-dot">&middot;</span>
+        </div>
+    </div>
+
+    <!-- HEADER --><!-- HEADER -->
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="/" class="logo" style="display:flex;align-items:center;">
@@ -652,6 +674,58 @@ image-set(url('/images/69b4fd49cab7f72607c7a01c.webp') type('image/webp'), url('
 
     </script>
     <script src="/design-enhance.js" defer></script>
+    <script>
+    (function() {
+        var prog = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var s = document.documentElement;
+            if (prog) prog.style.width = (window.scrollY / (s.scrollHeight - s.clientHeight) * 100) + '%';
+        }, { passive: true });
+        var header = document.getElementById('header');
+        var barH = (document.querySelector('.announce-bar') || {offsetHeight:36}).offsetHeight || 36;
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.scrollY > barH + 40);
+        }, { passive: true });
+        var io = new IntersectionObserver(function(e) {
+            e.forEach(function(x) { if (x.isIntersecting) { x.target.classList.add('visible'); io.unobserve(x.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.fade-up').forEach(function(el) { io.observe(el); });
+        var countIo = new IntersectionObserver(function(e) {
+            e.forEach(function(x) {
+                if (!x.isIntersecting) return;
+                var el = x.target, t = parseInt(el.dataset.target), sf = el.dataset.suffix || '', s = performance.now();
+                (function tick(n) {
+                    var p = Math.min((n-s)/1800,1), ease = 1-Math.pow(1-p,4);
+                    el.textContent = Math.floor(ease*t).toLocaleString()+sf;
+                    if(p<1) requestAnimationFrame(tick);
+                })(performance.now());
+                countIo.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.count-up').forEach(function(el) { countIo.observe(el); });
+        var hamburger = document.getElementById('hamburger');
+        var nav = document.getElementById('nav');
+        if (hamburger && nav) {
+            function toggleNav() { var o = nav.classList.toggle('show'); hamburger.setAttribute('aria-expanded', o); }
+            hamburger.addEventListener('click', toggleNav);
+            hamburger.addEventListener('keydown', function(e) { if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleNav();} });
+            document.querySelectorAll('#nav a').forEach(function(a) { a.addEventListener('click', function() { nav.classList.remove('show'); hamburger.setAttribute('aria-expanded','false'); }); });
+        }
+        var track = document.getElementById('announceTrack');
+        if (track) { var c = track.cloneNode(true); c.removeAttribute('id'); track.parentElement.appendChild(c); }
+        document.querySelectorAll('.service-card,.review-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) { var r=card.getBoundingClientRect(); card.style.setProperty('--cx',(e.clientX-r.left)+'px'); card.style.setProperty('--cy',(e.clientY-r.top)+'px'); });
+            card.addEventListener('mouseleave', function() { card.style.setProperty('--cx','-999px'); card.style.setProperty('--cy','-999px'); });
+        });
+        document.querySelectorAll('.seo-hero h1').forEach(function(h1) { var r=document.createElement('div'); r.className='hero-rule'; h1.insertAdjacentElement('afterend',r); });
+        document.querySelectorAll('.faq-card').forEach(function(c,i) { c.style.setProperty('--i',i); });
+        document.querySelectorAll('.glare-hover').forEach(function(el) {
+            el.addEventListener('mousemove', function(e) { var r=el.getBoundingClientRect(); el.style.setProperty('--gx',((e.clientX-r.left)/r.width*100)+'%'); el.style.setProperty('--gy',((e.clientY-r.top)/r.height*100)+'%'); });
+            el.addEventListener('mouseenter', function() { el.classList.add('glare-active'); });
+            el.addEventListener('mouseleave', function() { el.classList.remove('glare-active'); });
+        });
+    })();
+    </script>
 </body>
 
 </html>

@@ -766,6 +766,27 @@ font-size: 1.05rem
 </head>
 
 <body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+    <!-- ANNOUNCEMENT BAR (MagicUI marquee translation) -->
+    <div class="announce-bar" role="banner" aria-label="Site announcement">
+        <div class="announce-track" id="announceTrack">
+            <span>2,000+ Fragrance Oils</span>
+            <span class="announce-dot">&middot;</span>
+            <span>100ml MOQ</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Ships to 50+ Countries</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Deira Showroom Open Daily</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Free Samples up to 12 Oils</span>
+            <span class="announce-dot">&middot;</span>
+            <span>Private Label in 3&ndash;11 Weeks</span>
+            <span class="announce-dot">&middot;</span>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container header-inner">
@@ -817,13 +838,10 @@ font-size: 1.05rem
 
     <main>
 
-    <!-- HERO -->
+    <!-- HERO — editorial split layout -->
     <section class="hero" id="hero">
-        <picture>
-          <source srcset="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.webp" type="image/webp">
-          <img class="hero-bg-img" src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png" alt="" fetchpriority="high" loading="eager" decoding="sync" width="1920" height="1080">
-        </picture>
-        <div class="container">
+        <!-- Left: warm content panel -->
+        <div class="hero-left">
             <div class="hero-content fade-up">
                 <span class="tag">Dubai's Trusted Fragrance Supplier</span>
                 <h1>Wholesale Perfume Oil & Fragrance <span>Supplier</span> – Dubai</h1>
@@ -832,10 +850,35 @@ font-size: 1.05rem
                 <div class="hero-btns">
                     <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%27m%20interested%20in%20wholesale%20inquiry"
                         class="btn btn-primary" target="_blank" rel="noopener noreferrer">Contact</a>
-                    <a href="#visit-store" class="btn btn-outline" style="border-color:#fff;color:#fff">Visit Our
-                        Store in Deira</a>
+                    <a href="#visit-store" class="btn btn-outline btn-white">Visit Our Store in Deira</a>
+                </div>
+                <div class="hero-stat">
+                    <div>
+                        <strong class="count-up" data-target="2000" data-suffix="+">2000+</strong>
+                        <span>Fragrance Oils</span>
+                    </div>
+                    <div>
+                        <strong class="count-up" data-target="50" data-suffix="+">50+</strong>
+                        <span>Countries Served</span>
+                    </div>
+                    <div>
+                        <strong class="count-up" data-target="162" data-suffix="">162</strong>
+                        <span>5-Star Reviews</span>
+                    </div>
+                    <div>
+                        <strong>100ml</strong>
+                        <span>Min. Order Qty</span>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- Right: cinematic image panel with border-beam + meteors -->
+        <div class="hero-right" id="heroRight">
+            <div class="hero-right-overlay"></div>
+            <picture>
+              <source srcset="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.webp" type="image/webp">
+              <img class="hero-bg-img" src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.png" alt="" fetchpriority="high" loading="eager" decoding="sync" width="1920" height="1080">
+            </picture>
         </div>
     </section>
 
@@ -951,7 +994,7 @@ font-size: 1.05rem
     </section>
 
     <!-- REVIEWS -->
-    <section class="section-bg" id="reviews" style="padding:100px 0">
+    <section class="section-dark reviews-section" id="reviews">
         <div class="container">
             <div style="text-align:center;max-width:700px;margin:0 auto 48px" class="fade-up">
                 <span class="tag">Client Testimonials</span>
@@ -964,10 +1007,10 @@ font-size: 1.05rem
     </section>
 
     <!-- SCENT LIBRARY -->
-    <section class="section-bg scent-section" id="scent-library" style="padding:80px 0">
+    <section class="section-dark scent-section" id="scent-library">
         <div class="container">
             <div class="scent-grid">
-                <div class="scent-img fade-up"><img
+                <div class="scent-img border-beam fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd4aeba4871bf53db423.png"
                         alt="wholesale perfume oil supplier dubai - over 2000 fragrance options" 
                         loading="lazy" width="600" height="600"></div>
@@ -990,7 +1033,7 @@ font-size: 1.05rem
     </section>
 
     <!-- PRIVATE LABEL -->
-    <section class="section-white" id="private-label" style="padding:80px 0">
+    <section class="section-soft pl-section" id="private-label">
         <div class="container">
             <div class="pl-grid">
                 <div class="fade-up">
@@ -1007,7 +1050,7 @@ font-size: 1.05rem
                     <a href="https://wa.me/971547727106?text=Hi%2C%20I%27m%20interested%20in%20private%20label%20perfume%20filling"
                         class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Your Private Label Project</a>
                 </div>
-                <div class="pl-img fade-up"><img
+                <div class="pl-img glare-hover fade-up"><img
                         src="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49cab7f72607c7a01c.png"
                         alt="private label perfume filling dubai and custom blending service at Scent Bazaar"
                         loading="lazy" width="600" height="550"></div>
@@ -1016,7 +1059,7 @@ font-size: 1.05rem
     </section>
 
     <!-- RAW MATERIALS -->
-    <section class="section-bg" id="raw-materials" style="padding:80px 0">
+    <section class="section-bg raw-section" id="raw-materials">
         <div class="container">
             <div class="raw-grid">
                 <div class="raw-img fade-up"><img
@@ -1046,7 +1089,7 @@ font-size: 1.05rem
     </section>
 
     <!-- VISIT STORE -->
-    <section class="section-white" id="visit-store" style="padding:80px 0">
+    <section class="section-soft store-section" id="visit-store">
         <div class="container">
             <div style="text-align:center;max-width:850px;margin:0 auto 48px" class="fade-up">
                 <span class="tag">Our Flagship Location</span>
@@ -1152,7 +1195,7 @@ font-size: 1.05rem
     </section>
 
     <!-- FAQ -->
-    <section class="section-bg" id="faq" style="padding:80px 0">
+    <section class="section-soft faq-section" id="faq">
         <div class="container">
             <div style="text-align:center;max-width:700px;margin:0 auto 40px" class="fade-up">
                 <span class="tag">Common Questions</span>
@@ -1236,6 +1279,7 @@ font-size: 1.05rem
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
+            <h2 class="footer-headline">Crafted in Dubai. Delivered Worldwide.</h2>
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="/" class="logo" style="display:flex;align-items:center;">
@@ -1374,57 +1418,179 @@ font-size: 1.05rem
 
     
     <script>
-        // Header scroll effect — throttled via requestAnimationFrame
-        const header = document.getElementById('header');
-        let scrollPending = false;
-        window.addEventListener('scroll', () => {
+    (function() {
+        /* ── 1. SCROLL PROGRESS BAR ──────────────────────────────── */
+        var prog = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var s = document.documentElement;
+            var pct = (window.scrollY / (s.scrollHeight - s.clientHeight)) * 100;
+            if (prog) prog.style.width = pct + '%';
+        }, { passive: true });
+
+        /* ── 2. HEADER SCROLL ────────────────────────────────────── */
+        var header = document.getElementById('header');
+        var announceBar = document.querySelector('.announce-bar');
+        var barH = announceBar ? announceBar.offsetHeight : 36;
+        var scrollPending = false;
+        window.addEventListener('scroll', function() {
             if (!scrollPending) {
                 scrollPending = true;
-                requestAnimationFrame(() => {
-                    const isScrolled = window.scrollY > 60;
-                    header.classList.toggle('scrolled', isScrolled);
-                    document.body.classList.toggle('scrolled', isScrolled);
+                requestAnimationFrame(function() {
+                    header.classList.toggle('scrolled', window.scrollY > barH + 40);
+                    document.body.classList.toggle('scrolled', window.scrollY > barH + 40);
                     scrollPending = false;
                 });
             }
         }, { passive: true });
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        /* ── 3. FADE-UP INTERSECTION OBSERVER ───────────────────── */
+        var io = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.fade-up').forEach(function(el) { io.observe(el); });
 
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        /* ── 4. DATA-REVEAL OBSERVER ─────────────────────────────── */
+        var ioR = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('revealed');
+                    ioR.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('[data-reveal]').forEach(function(el) { ioR.observe(el); });
 
-        // Mobile nav
-        const style = document.createElement('style');
-        style.textContent = `
-@media(max-width:768px){
-  .nav.show{display:flex!important;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);padding:24px;box-shadow:var(--shadow-lg)}
-  .nav.show a{color:var(--dark)!important;padding:12px 0;border-bottom:1px solid #eee}
-}`;
-        document.head.appendChild(style);
+        /* ── 5. COUNT-UP NUMBER TICKER ───────────────────────────── */
+        var countIo = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (!e.isIntersecting) return;
+                var el = e.target;
+                var target = parseInt(el.dataset.target, 10);
+                var suffix = el.dataset.suffix || '';
+                var duration = 1800;
+                var start = performance.now();
+                function tick(now) {
+                    var p = Math.min((now - start) / duration, 1);
+                    var ease = 1 - Math.pow(1 - p, 4);
+                    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+                    if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+                countIo.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.count-up').forEach(function(el) { countIo.observe(el); });
 
-        // Mobile nav toggle with aria-expanded
-        const hamburger = document.getElementById('hamburger');
-        const nav = document.getElementById('nav');
+        /* ── 6. MOBILE NAV ───────────────────────────────────────── */
+        var hamburger = document.getElementById('hamburger');
+        var nav = document.getElementById('nav');
         function toggleNav() {
-            const isOpen = nav.classList.toggle('show');
+            var isOpen = nav.classList.toggle('show');
             hamburger.setAttribute('aria-expanded', isOpen);
         }
         hamburger.addEventListener('click', toggleNav);
-        hamburger.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); } });
-
-        // Close mobile nav on link click
-        document.querySelectorAll('#nav a').forEach(a => {
-            a.addEventListener('click', () => { nav.classList.remove('show'); hamburger.setAttribute('aria-expanded', 'false'); });
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); }
         });
+        document.querySelectorAll('#nav a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                nav.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        /* ── 7. METEOR INJECTION ─────────────────────────────────── */
+        function injectMeteors(container, count) {
+            for (var i = 0; i < count; i++) {
+                var m = document.createElement('span');
+                m.className = 'meteor';
+                m.style.cssText = '--delay:' + (Math.random()*7).toFixed(1) + 's;' +
+                    '--x:' + (Math.random()*100).toFixed(0) + '%;' +
+                    '--dur:' + (2+Math.random()*3.5).toFixed(1) + 's;';
+                container.appendChild(m);
+            }
+        }
+        var heroRight = document.getElementById('heroRight');
+        if (heroRight) injectMeteors(heroRight, 14);
+
+        /* ── 8. ANNOUNCE BAR SEAMLESS LOOP ──────────────────────── */
+        var track = document.getElementById('announceTrack');
+        if (track) {
+            var clone = track.cloneNode(true);
+            clone.removeAttribute('id');
+            track.parentElement.appendChild(clone);
+        }
+
+        /* ── 9. SERVICE CARD SPOTLIGHT (magic-card) ─────────────── */
+        document.querySelectorAll('.service-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) {
+                var r = card.getBoundingClientRect();
+                card.style.setProperty('--cx', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--cy', (e.clientY - r.top) + 'px');
+            });
+            card.addEventListener('mouseleave', function() {
+                card.style.setProperty('--cx', '-999px');
+                card.style.setProperty('--cy', '-999px');
+            });
+        });
+
+        /* ── 10. REVIEW CARD SPOTLIGHT ──────────────────────────── */
+        document.querySelectorAll('.review-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) {
+                var r = card.getBoundingClientRect();
+                card.style.setProperty('--cx', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--cy', (e.clientY - r.top) + 'px');
+            });
+            card.addEventListener('mouseleave', function() {
+                card.style.setProperty('--cx', '-999px');
+                card.style.setProperty('--cy', '-999px');
+            });
+        });
+
+        /* ── 11. STORE MAP TILT ──────────────────────────────────── */
+        var map = document.querySelector('.store-map');
+        if (map) {
+            map.addEventListener('mouseenter', function() {
+                map.style.transform = 'rotate(0deg)';
+                map.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+            });
+            map.addEventListener('mouseleave', function() {
+                map.style.transform = 'rotate(-1.2deg)';
+            });
+        }
+
+        /* ── 12. GLARE HOVER (private label + product images) ────── */
+        document.querySelectorAll('.glare-hover').forEach(function(el) {
+            el.addEventListener('mousemove', function(e) {
+                var r = el.getBoundingClientRect();
+                el.style.setProperty('--gx', ((e.clientX - r.left) / r.width * 100) + '%');
+                el.style.setProperty('--gy', ((e.clientY - r.top) / r.height * 100) + '%');
+            });
+            el.addEventListener('mouseenter', function() { el.classList.add('glare-active'); });
+            el.addEventListener('mouseleave', function() { el.classList.remove('glare-active'); });
+        });
+
+        /* ── 13. SEO HERO RULE INJECTION ─────────────────────────── */
+        document.querySelectorAll('.seo-hero h1').forEach(function(h1) {
+            var rule = document.createElement('div');
+            rule.className = 'hero-rule';
+            h1.insertAdjacentElement('afterend', rule);
+        });
+
+        /* ── 14. FAQ STAGGER INDICES ─────────────────────────────── */
+        document.querySelectorAll('.faq-card').forEach(function(card, i) {
+            card.style.setProperty('--i', i);
+            card.classList.add('fade-up');
+            io.observe(card);
+        });
+
+    })();
     </script>
-    <script src="/design-enhance.js" defer></script>
 </body>
 
 </html>
