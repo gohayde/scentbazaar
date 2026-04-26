@@ -447,41 +447,9 @@
     <main id="main">
 
     <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="hero-left">
-            <div class="hero-content fade-up">
-                <p class="hero-location">Souq Naif, Deira, Dubai</p>
-                <h1>Dubai's <em>wholesale</em> fragrance source</h1>
-                <p class="hero-sub">2,000+ concentrated perfume oils, perfumers alcohol, private label manufacturing, and global export — all from one address in the historic heart of Dubai's scent trade.</p>
-                <div class="hero-btns">
-                    <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%27m%20interested%20in%20a%20wholesale%20inquiry"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                        Start an Inquiry
-                        <span class="btn-icon">↗</span>
-                    </a>
-                    <a href="#visit-store" class="btn btn-outline">Visit the Showroom</a>
-                </div>
-                <div class="hero-proof">
-                    <div class="hero-proof-item">
-                        <span class="hero-proof-num count-up" data-target="2000" data-suffix="+">2000+</span>
-                        <span class="hero-proof-label">Fragrance Oils</span>
-                    </div>
-                    <div class="hero-proof-item">
-                        <span class="hero-proof-num count-up" data-target="50" data-suffix="+">50+</span>
-                        <span class="hero-proof-label">Countries Served</span>
-                    </div>
-                    <div class="hero-proof-item">
-                        <span class="hero-proof-num count-up" data-target="162" data-suffix="">162</span>
-                        <span class="hero-proof-label">5-Star Reviews</span>
-                    </div>
-                    <div class="hero-proof-item">
-                        <span class="hero-proof-num">100ml</span>
-                        <span class="hero-proof-label">Min. Order Qty</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-right" id="heroRight">
+    <section class="hero hero-v2" id="hero">
+        <!-- Full-bleed image behind everything -->
+        <div class="hero-right hero-bg-panel" id="heroRight">
             <div class="hero-right-overlay"></div>
             <picture>
               <source srcset="https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49bfc81f109409b8fc.webp" type="image/webp">
@@ -489,6 +457,44 @@
                 alt="Scent Bazaar fragrance oil showroom, Souq Naif, Deira, Dubai"
                 fetchpriority="high" loading="eager" decoding="sync" width="1920" height="1080">
             </picture>
+        </div>
+        <!-- Content floats over image -->
+        <div class="hero-left hero-overlay-content">
+            <div class="hero-content fade-up">
+                <p class="hero-location">Souq Naif, Deira, Dubai</p>
+                <h1>Dubai's <em>wholesale</em><br>fragrance source</h1>
+                <p class="hero-sub">2,000+ concentrated perfume oils, perfumers alcohol, private label manufacturing, and global export — all from one address in the historic heart of Dubai's scent trade.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%27m%20interested%20in%20a%20wholesale%20inquiry"
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Start an Inquiry
+                        <span class="btn-icon">↗</span>
+                    </a>
+                    <a href="#visit-store" class="btn btn-white">Visit the Showroom</a>
+                </div>
+            </div>
+        </div>
+        <!-- Proof strip pinned to bottom edge -->
+        <div class="hero-proof hero-proof-bar">
+            <div class="hero-proof-item">
+                <span class="hero-proof-num count-up" data-target="2000" data-suffix="+">2000+</span>
+                <span class="hero-proof-label">Fragrance Oils</span>
+            </div>
+            <div class="hero-proof-sep" aria-hidden="true"></div>
+            <div class="hero-proof-item">
+                <span class="hero-proof-num count-up" data-target="50" data-suffix="+">50+</span>
+                <span class="hero-proof-label">Countries Served</span>
+            </div>
+            <div class="hero-proof-sep" aria-hidden="true"></div>
+            <div class="hero-proof-item">
+                <span class="hero-proof-num count-up" data-target="162" data-suffix="">162</span>
+                <span class="hero-proof-label">5-Star Reviews</span>
+            </div>
+            <div class="hero-proof-sep" aria-hidden="true"></div>
+            <div class="hero-proof-item">
+                <span class="hero-proof-num">100ml</span>
+                <span class="hero-proof-label">Min. Order Qty</span>
+            </div>
         </div>
     </section>
 
@@ -515,24 +521,26 @@
     </div>
 
     <!-- CREDIBILITY BAND -->
-    <div class="credibility-band" aria-label="About Scent Bazaar">
-        <div class="credibility-inner">
-            <div class="cred-block fade-up">
+    <div class="credibility-band credibility-band-v2" aria-label="About Scent Bazaar">
+        <div class="credibility-inner-v2">
+            <!-- Left: dominant anchor statement -->
+            <div class="cred-anchor fade-up">
                 <span class="cred-label">Our Expertise</span>
                 <p class="cred-statement">Chemical engineering at the core</p>
                 <p class="cred-detail">Founded by Nawar Mohammed, a qualified chemical engineer specialising in fragrance chemistry and aroma compound formulation. Every product recommendation is backed by technical expertise, not guesswork.</p>
             </div>
-            <div class="cred-divider" aria-hidden="true"></div>
-            <div class="cred-block fade-up">
-                <span class="cred-label">Supply Chain</span>
-                <p class="cred-statement">One source, complete infrastructure</p>
-                <p class="cred-detail">Oils, alcohol, bottles, caps, spray pumps, and packaging all under one roof in Naif Souq. Private label from concept to finished product, 3 to 11 weeks. No coordinating across multiple suppliers.</p>
-            </div>
-            <div class="cred-divider" aria-hidden="true"></div>
-            <div class="cred-block fade-up">
-                <span class="cred-label">Global Compliance</span>
-                <p class="cred-statement">Export-ready documentation, every order</p>
-                <p class="cred-detail">MSDS, COA, allergen declarations, and Dangerous Goods classification prepared as standard. Our logistics team has direct experience with import requirements across 50+ destination countries.</p>
+            <!-- Right: two stacked facts -->
+            <div class="cred-facts-stack">
+                <div class="cred-fact fade-up">
+                    <span class="cred-label">Supply Chain</span>
+                    <p class="cred-statement">One source, complete infrastructure</p>
+                    <p class="cred-detail">Oils, alcohol, bottles, caps, spray pumps, and packaging all under one roof in Naif Souq. Private label from concept to finished product, 3 to 11 weeks.</p>
+                </div>
+                <div class="cred-fact fade-up">
+                    <span class="cred-label">Global Compliance</span>
+                    <p class="cred-statement">Export-ready documentation, every order</p>
+                    <p class="cred-detail">MSDS, COA, allergen declarations, and Dangerous Goods classification prepared as standard. Direct logistics experience across 50+ destination countries.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -540,10 +548,14 @@
     <!-- SERVICES -->
     <section class="section-bg" id="services" style="padding:80px 0 100px">
         <div class="container">
-            <div class="services-header fade-up">
-                <span class="tag">Complete Fragrance Supply</span>
-                <h2>What Scent Bazaar Supplies</h2>
-                <p>From raw concentrated oils to finished branded bottles: every component of a fragrance operation, wholesale from Deira.</p>
+            <div class="services-header services-header-v2 fade-up">
+                <div class="services-header-left">
+                    <span class="tag">Complete Fragrance Supply</span>
+                    <h2>What Scent Bazaar Supplies</h2>
+                </div>
+                <div class="services-header-right">
+                    <p>From raw concentrated oils to finished branded bottles: every component of a fragrance operation, wholesale from Deira.</p>
+                </div>
             </div>
             <div class="services-grid">
                 <a href="/wholesale-perfume-oil-dubai" class="service-card fade-up"
@@ -628,10 +640,20 @@
     <!-- REVIEWS -->
     <section class="section-dark reviews-section" id="reviews">
         <div class="container">
-            <div style="text-align:center;max-width:700px;margin:0 auto 48px" class="fade-up">
-                <span class="tag">Client Testimonials</span>
-                <h2>What Our Customers Say</h2>
-                <p>100+ verified 5-star Google reviews from wholesale buyers, private label brands, and fragrance entrepreneurs across 50+ countries.</p>
+            <div class="reviews-header fade-up">
+                <div class="reviews-header-left">
+                    <span class="reviews-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <span class="tag">Client Testimonials</span>
+                    <h2>What Our Customers Say</h2>
+                </div>
+                <div class="reviews-header-right">
+                    <p>100+ verified 5-star Google reviews from wholesale buyers, private label brands, and fragrance entrepreneurs across 50+ countries.</p>
+                    <div class="reviews-stars" aria-label="4.9 out of 5 stars">
+                        <span>★★★★★</span>
+                        <strong>4.9</strong>
+                        <span class="reviews-count">162 verified reviews</span>
+                    </div>
+                </div>
             </div>
             <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js' defer></script>
             <iframe title="Customer Reviews" class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/n2JV7OnZcOBeCtUnjWku' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; border: none; height: 800px;'></iframe>
@@ -829,11 +851,20 @@
     <!-- FAQ -->
     <section class="section-soft faq-section" id="faq">
         <div class="container">
-            <div style="text-align:center;max-width:700px;margin:0 auto 40px" class="fade-up">
-                <span class="tag">Common Questions</span>
-                <h2>Frequently Asked Questions</h2>
+            <div class="faq-header fade-up">
+                <div class="faq-header-left">
+                    <span class="tag">Common Questions</span>
+                    <h2>Frequently Asked<br>Questions</h2>
+                    <p>Everything a wholesale buyer or brand founder needs to know before placing an order or visiting our Deira showroom.</p>
+                </div>
+                <div class="faq-header-right">
+                    <a href="https://wa.me/971547727106?text=Hi%20Scent%20Bazaar%2C%20I%20have%20a%20question" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Ask Us Directly
+                        <span class="btn-icon">↗</span>
+                    </a>
+                </div>
             </div>
-            <div class="faq-grid fade-up">
+            <div class="faq-grid faq-grid-v2 fade-up">
                 <div class="faq-card">
                     <details>
                         <summary>Where is Scent Bazaar located?</summary>
