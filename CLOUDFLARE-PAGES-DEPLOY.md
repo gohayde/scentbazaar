@@ -13,6 +13,7 @@ This site is a static HTML site. GitHub is the source of truth, and Cloudflare P
 - Production branch: `main`
 - Framework preset: `None`
 - Build command: leave empty
+- Deploy command: leave empty
 - Build output directory: `/`
 
 ## Custom domains
@@ -45,10 +46,4 @@ curl.exe -I https://scentbazaar.co/
 
 Expected result: `www` returns a 301 redirect to the apex domain, and the apex returns the site without a certificate warning.
 
-## Optional manual deploy
-
-Wrangler is kept as an optional fallback if a manual deploy is ever needed:
-
-```powershell
-npm run deploy
-```
+Do not use `npx wrangler deploy` for this project. That command is for Workers and fails on this static Pages site.
