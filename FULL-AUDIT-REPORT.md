@@ -1,377 +1,266 @@
-# Scent Bazaar — Full SEO Audit Report
-**URL:** https://scentbazaar.co/  
-**Date:** 2026-04-25  
-**Auditor:** Claude SEO Audit System (multi-agent)  
-**Business Type:** B2B Wholesale Perfume Oil & Fragrance Supplier — Dubai, UAE (hybrid: physical store + global export)  
-**Pages Crawled:** 18 / 18  
-**Subagents Run:** Technical SEO · Content Quality · Schema · Performance (CWV) · GEO/AI Search · SXO · Local SEO · Backlinks
+# Full SEO Audit Report — scentbazaar.co
+**Audit Date:** 27 April 2026
+**Audited by:** 9 parallel specialist agents
+**Business:** Scent Bazaar — Wholesale Fragrance Ingredient Supplier, Deira, Dubai, UAE
 
 ---
 
-## Overall SEO Health Score: 61 / 100
+## Overall SEO Health Score: 68 / 100
 
-| Category | Weight | Raw Score | Weighted |
+| Category | Weight | Score | Weighted |
 |---|---|---|---|
-| Technical SEO | 22% | 74 | 16.3 |
-| Content Quality | 23% | 61 | 14.0 |
-| On-Page SEO | 20% | 58 | 11.6 |
-| Schema / Structured Data | 10% | 52 | 5.2 |
-| Performance (CWV) | 10% | 67 | 6.7 |
-| AI Search Readiness | 10% | 61 | 6.1 |
-| Images | 5% | 70 | 3.5 |
-| **Total** | **100%** | | **63.4 → 61** |
-
-*(Capped at 61 due to two site-wide critical bugs: sitewide broken nav link + broken homepage JSON-LD schema)*
+| Technical SEO | 22% | 81 | 17.8 |
+| Content Quality | 23% | 72 | 16.6 |
+| On-Page SEO | 20% | 65 | 13.0 |
+| Schema / Structured Data | 10% | 70 | 7.0 |
+| Performance (CWV) | 10% | 58 | 5.8 |
+| AI Search Readiness (GEO) | 10% | 74 | 7.4 |
+| Local SEO | 5% | 61 | 3.1 |
+| **TOTAL** | | | **70.7 ≈ 68** |
 
 ---
 
 ## Executive Summary
 
-Scent Bazaar is a well-positioned B2B fragrance supplier with strong on-site content, a physical Dubai showroom, and a modern technical foundation. Two bugs are blocking disproportionate SEO value: a **trailing comma in the homepage JSON-LD schema** that invalidates all structured data on the most important page, and a **sitewide broken navigation link** to a 404 buyer's guide. Both are 15-minute fixes with outsized impact.
+Scent Bazaar has a well-structured static site with strong technical fundamentals — HTTPS enforced, clean URLs, good schema diversity, all AI crawlers permitted, and an llms.txt in place. The site is indexable and technically sound.
 
-Beyond those, the site's largest gaps are strategic rather than technical: **zero meta descriptions across all 18 pages**, **conflicting business hours in three locations**, and **no secondary conversion path for international buyers** (WhatsApp-only). Content depth is strong but the **absence of pricing transparency** and **no active blog** leaves significant ranking and citation surface untapped.
+However, several **critical bugs are live in production** that are actively damaging trust and conversions:
 
-### Top 5 Critical Issues
-1. Homepage JSON-LD Block 1 has a trailing comma — entire structured data block (Store, Organization, Person, WebSite, FAQPage) is invalid and invisible to Google
-2. Navigation links to `/blog/top-perfume-oil-suppliers-dubai` which returns a 404 — broken on every page sitewide
-3. Zero meta descriptions across all 18 indexed pages
-4. Business hours appear in three different versions across the site (homepage schema, store page, FAQ)
-5. Hero image preload has a source mismatch (preloads self-hosted WebP path, img src points to external CDN PNG)
+1. **Broken review links** — `[REPLACE_WITH_GBP_REVIEW_URL]` placeholder is published on every inner page, making all "Leave a Google Review" buttons non-functional.
+2. **GSC not verified** — the Google Search Console verification meta tag is commented out. The site owner has no access to index coverage, manual action alerts, or link data.
+3. **Google Fonts @import chain** — worst-case font-loading pattern adding 300–600ms to LCP.
+4. **About page has broken navigation** — uses a stripped bare `<nav>` instead of the full header; users landing on About from search cannot reach product pages.
+5. **AggregateRating inconsistency** — homepage declares 4.9 stars, all inner pages declare 5.0; factual inaccuracy in structured data.
 
 ### Top 5 Quick Wins
-1. Fix trailing comma in homepage JSON-LD (15 min) — restores all structured data instantly
-2. Fix or redirect `/blog/top-perfume-oil-suppliers-dubai` nav link (10 min) — stops sitewide 404 crawl drain
-3. Write and deploy meta descriptions for all 18 pages (2–3 hours) — immediate CTR lift
-4. Reconcile business hours to one canonical set everywhere (30 min) — fixes trust/GBP conflict
-5. Add `aggregateRating` to LocalBusiness schema (30 min) — surfaces 162 five-star rating in SERP
+1. Replace `[REPLACE_WITH_GBP_REVIEW_URL]` with the real GBP review URL on all pages
+2. Uncomment / fix GSC verification
+3. Fix Google Fonts `@import` chain in `fonts.css`
+4. Fix `about-us.html` navigation to use the standard site header
+5. Standardise `aggregateRating` ratingValue to `4.9` on all inner pages
 
 ---
 
-## 1. Technical SEO — Score: 74 / 100
+## 1. Technical SEO — Score: 81/100
 
-### 1.1 Crawlability — PASS (90/100)
-- robots.txt correctly allows all bots including AI crawlers: GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Amazonbot
-- Sitemap.xml referenced in robots.txt — 18 URLs, all indexable
-- sitemap-images.xml present with 15 image entries across 13 pages
-- **CRITICAL:** Navigation links to `/blog/top-perfume-oil-suppliers-dubai` returning a hard 404. Present on every page sitewide — wastes crawl budget and fails users at the research stage of their journey.
+**What's working:**
+- Full HTTPS with 1-year HSTS via Fastly/GitHub Pages CDN
+- Zero mixed content across all 20 pages
+- Clean, keyword-rich URL slugs; consistent canonical tags on every page
+- All pages indexable — no noindex directives
+- robots.txt explicitly allows all AI crawlers (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot)
+- Hero LCP image preloaded with `fetchpriority="high"`, WebP format, CDN preconnect
+- `font-display: optional` eliminates font-swap CLS
+- All images have explicit `width`/`height` — strong CLS prevention
+- `llms.txt` present and well-populated
+- `sitemap-images.xml` present alongside main sitemap
 
-### 1.2 Indexability — PASS with Issues (78/100)
-- No noindex signals detected on any pages
-- Self-referencing canonicals confirmed
-- **HIGH RISK:** `/perfume-oil-supplier-dubai` and `/wholesale-perfume-oil-dubai` target near-identical intent with overlapping content. Both have independent canonicals. Google may struggle to determine which to rank — duplicate content dilution risk.
-- Legal pages (privacy-policy, terms-of-service) absent from sitemap — acceptable practice
+**Issues:**
 
-### 1.3 Security — PASS (92/100)
-- HTTPS enforced site-wide; Fastly CDN
-- HSTS: `max-age=31556952` (~1 year) — acceptable; best practice is 2-year + `includeSubDomains`
-- Content-Security-Policy implemented via `<meta>` tag (not HTTP response header) — reduced protection
-- Missing: `X-Content-Type-Options` and `X-Frame-Options` response headers
-
-### 1.4 URL Structure — PASS (88/100)
-- All URLs lowercase, hyphenated, descriptive, keyword-rich
-- No redirect chains detected on tested URLs
-- No trailing slash inconsistency
-
-### 1.5 Mobile-Friendliness — PASS (90/100)
-- Viewport meta tag correct (`width=device-width, initial-scale=1.0`)
-- Responsive typography using `clamp()`
-- No fixed-width containers detected
-
-### 1.6 Internal Linking — NEEDS IMPROVEMENT (65/100)
-- Homepage links to all 17 product/service pages (flat architecture — acceptable at 18 pages)
-- Broken blog nav link present sitewide
-- No breadcrumb navigation on any page
-- About-us not cross-linked from product pages
-
-### 1.7 Hreflang — PARTIAL (60/100)
-- `hreflang="en"` and `hreflang="x-default"` implemented on tested pages
-- `og:locale` correctly set to `en_AE`
-- No Arabic-language variant — significant opportunity given GCC/MENA buyer base
-
-### 1.8 IndexNow — FAIL (0/100)
-- No IndexNow implementation found
-- Would accelerate Bing/Yandex indexation at zero cost for a static GitHub Pages site
-
----
-
-## 2. Content Quality & E-E-A-T — Score: 61 / 100
-
-### 2.1 E-E-A-T Assessment
-
-**Experience: 14/20**  
-Founder credentials (Nawar Mohammed, chemical engineer) documented on About page. 162 verified Google reviews and 50+ country service claim add real-world validation. Weaknesses: no case studies, no named B2B client testimonials, no formulation outcomes documented.
-
-**Expertise: 17/25**  
-Technical content quality is high — fragrance chemistry, concentration levels, storage guidance, regulatory terms (MSDS, COA) used accurately. No certifications (IFRA, ISO) surfaced visibly in content. No team page beyond founder.
-
-**Authoritativeness: 13/25**  
-No external citations, press mentions, or trade directory listings referenced. "50+ countries" is a strong claim without corroborating evidence (client logos, country list, named wholesaler testimonials). No backlink-worthy content assets beyond one broken buyer's guide.
-
-**Trustworthiness: 17/30**  
-Missing meta descriptions on all 18 pages. Business hours conflict across three locations — factual inconsistency is directly flagged in Google's QRG criteria. No pricing transparency. No visible certifications, no returns/refund policy for B2B buyers.
-
-### 2.2 Content Depth
-Pages average 2,500–4,000 words. Homepage is ~6,500–7,000 words. FAQ-heavy structure is appropriate for B2B decision support. No thin content detected on sampled pages.
-
-### 2.3 Meta Descriptions — CRITICAL GAP
-**All 18 indexed pages are missing meta descriptions.** Google is auto-generating excerpts from body copy — uncontrolled and typically suboptimal for CTR. Every competitor with a crafted meta description has a direct advantage in SERP snippets.
-
-### 2.4 Duplicate Content Risk
-`/perfume-oil-supplier-dubai` and `/wholesale-perfume-oil-dubai` overlap significantly. Requires differentiation or consolidation.
-
-### 2.5 AI Citation Readiness: 38/100
-FAQ blocks contain citable numbers (100ml MOQ, 5L alcohol MOQ, 2,000+ SKUs, 24–36 month shelf life). Section introductions are marketing-toned rather than factual-answer-first, reducing AI passage extraction probability. No founder byline in crawlable content metadata.
-
----
-
-## 3. On-Page SEO — Score: 58 / 100
-
-### 3.1 Title Tags — PASS
-| Page | Title Tag |
+| Severity | Issue |
 |---|---|
-| Homepage | Wholesale Perfume Oil & Fragrance Supplier – Dubai |
-| /wholesale-perfume-oil-dubai | Wholesale Perfume Oil Dubai \| Bulk Fragrance Supplier UAE |
-| /private-label-perfume-dubai | Private Label Perfume Dubai \| OEM Fragrance Manufacturing UAE |
-| /perfume-store-deira | Perfume Store in Deira Dubai \| Wholesale Fragrance Hub |
-| /about-us | About Scent Bazaar \| Perfume Oil Supplier Dubai Since 2025 |
-| /perfumers-alcohol-supplier-dubai | Perfumers Alcohol Supplier Dubai \| Technical Grade UAE |
-| /perfume-bottle-supplier-dubai | Perfume Bottle Supplier Dubai \| Glass Bottles & Packaging UAE |
-
-All sampled title tags are keyword-rich and well-structured. Note: "Since 2025" in the About title may undermine authority perception for buyers evaluating supplier stability.
-
-### 3.2 Meta Descriptions — ALL MISSING
-See Section 2.3. Affects all 18 pages uniformly.
-
-### 3.3 Heading Structure — PASS
-All sampled pages have a single, keyword-aligned H1. H2 structure is comprehensive (6–9 H2s per page). FAQ sections consistently H2-headed. No duplicate H1s detected.
-
-### 3.4 Internal Linking — NEEDS IMPROVEMENT
-Navigation cross-links to all product/service pages. Semantic cross-linking between related pages is inconsistent. Broken blog link in primary nav is the most damaging on-page link issue.
+| Medium | **GSC verification tag commented out** in `index.html:52` — no Search Console access, no link data, no manual action alerts |
+| Medium | **`SearchAction` schema** points to `/?s={search_term_string}` — site has no search; remove this potentialAction |
+| Medium | **CSP `connect-src` missing `https://reputationhub.site`** — review widget may silently break in strict browsers |
+| Medium | **Security headers via `http-equiv` are ignored** by browsers on GitHub Pages — `X-Frame-Options`, `X-Content-Type-Options` have no effect; need real HTTP headers via Cloudflare/Netlify |
+| Medium | **IndexNow key meta tag** on only 2 of 20 pages; use the key file at root as the canonical method and remove page-level tags |
+| Low | `dateModified` differs between Store (`2026-03-23`) and WebPage (`2026-03-26`) schema |
+| Low | `closes: "23:59"` should be `"00:00"` for midnight in OpeningHoursSpecification |
 
 ---
 
-## 4. Schema / Structured Data — Score: 52 / 100
+## 2. Content Quality & On-Page SEO — Score: 72/100
 
-### 4.1 Current Implementation
-Schema IS present on the site (WebFetch initially missed JSON-LD in `<head>`; confirmed by direct HTML inspection).
+**What's working:**
+- Content depth is excellent — landing pages average 2,500–3,500 words with substantive FAQ answers (120–200 words each)
+- Technical accuracy is high — perfumers alcohol, private label, and bakhoor pages demonstrate genuine domain expertise
+- Question-format H2/H3 headings on all inner pages (ideal for AI Overviews and PAA)
+- Internal cross-linking between related pages with descriptive anchor text
+- Meta descriptions are present on all pages and within 150–160 characters
+- First-person founder narrative on About page is the strongest E-E-A-T signal on the site
 
-**Homepage — 3 JSON-LD blocks:**
-| Block | Types | Status |
+**Critical bugs in production:**
+
+| Severity | Issue | Files Affected |
 |---|---|---|
-| Block 1 @graph | Store, Organization, Person, WebSite, FAQPage | **INVALID — trailing comma syntax error** |
-| Block 2 | ItemList | VALID |
-| Block 3 | WebPage | VALID |
+| **Critical** | **`[REPLACE_WITH_GBP_REVIEW_URL]` placeholder live in production** — every "Leave a Google Review" CTA is broken | All inner pages (14 confirmed) |
+| **High** | **About page uses completely different navigation** — stripped `<nav>` with 6 plain links instead of the standard header with dropdowns | `about-us.html` |
+| **High** | **Malformed footer HTML** — multiple `<a>` tags inside single `<li>` elements in the Services footer column | `fragrance-oil-supplier-dubai.html`, `private-label-perfume-dubai.html`, `perfumers-alcohol-supplier-dubai.html` |
+| **High** | **`about-us.html` `<style>` block is broken CSS** — property values appear outside selectors, meaning intended styles do not apply | `about-us.html` |
 
-**`/perfume-store-deira` — 2 JSON-LD blocks:**
-| Block | Types | Status |
-|---|---|---|
-| Block 1 | Store + BreadcrumbList | VALID |
-| Block 2 | FAQPage | VALID |
+**On-page issues:**
 
-### 4.2 Critical Bug: Trailing Comma
-The `FAQPage.mainEntity` array in Homepage Block 1 ends with a trailing comma before the closing `]`. This causes the **entire Block 1 to fail JSON parsing** — Store, Organization, Person, WebSite, and FAQPage are all invisible to Google's structured data parser.
-
-**Fix:** Remove the single trailing comma after the last `Question` object in the `mainEntity` array.
-
-### 4.3 Opening Hours Inconsistency
-| Location | Hours Shown |
+| Severity | Issue |
 |---|---|
-| Homepage Store schema | 10:00–01:00 (overnight, 3am close) |
-| /perfume-store-deira Store schema | 09:00–22:00 Mon–Sat |
-| Page visible content | Mon–Sat 9:00 AM–10:00 PM, Sun Closed |
-| FAQ answer | Sat–Thu 9am–8pm, Fri 4pm–8pm |
-
-**Canonical answer:** Mon–Sat 09:00–22:00, Sunday Closed. Update all four locations.
-
-### 4.4 Missing Schema Opportunities
-- `Service` schema on 5 service pages
-- `AggregateRating` (162 reviews in copy, not in schema)
-- `BreadcrumbList` on homepage
-- `Product` schema on product category pages
-- `geo` (latitude/longitude) in LocalBusiness
+| Medium | **Homepage H1 doesn't contain the primary keyword** — "Dubai's wholesale fragrance source" vs target "wholesale perfume oil supplier Dubai" |
+| Medium | **AggregateRating is 4.9 on homepage but 5.0 on all inner pages** — factual inaccuracy in structured data |
+| Medium | **Duplicate boilerplate meta descriptions** on 12+ pages — each page must have a unique description |
+| Medium | **Breadcrumb label on `fragrance-oil-supplier-dubai.html`** reads "Global Export" — wrong, should be "Fragrance Oil Supplier Dubai" |
+| Low | About page title "Since 2025" signals a very young business to B2B buyers — remove or reframe |
+| Low | No HowTo schema on private-label step-by-step process section |
+| Low | No visible author byline on any page (founder only in schema, not visible HTML) |
 
 ---
 
-## 5. Performance (Core Web Vitals) — Score: 67 / 100
+## 3. Schema / Structured Data — Score: 70/100
 
-**Estimated PageSpeed: Mobile 62–72 | Desktop 80–88**
+**What's working:**
+- Rich `@graph` on homepage: Store, Organization, Person, WebSite, FAQPage — well cross-referenced via `@id`
+- `aggregateRating` with all required fields present
+- BreadcrumbList on all inner pages
+- `sameAs` social profiles populated
+- `geo` with precise coordinates, opening hours with split Friday entry
+- All blocks use JSON-LD and `https://schema.org`
 
-### 5.1 LCP — Needs Improvement
-Hero image has a **preload/source mismatch**: `<link rel="preload">` targets a self-hosted WebP path; `<img src>` targets an external CDN PNG. WebP users correctly use the preload; PNG fallback fetched cold from external CDN. Logo also has competing `fetchpriority="high"` — only one element should carry this attribute.
+**Issues:**
 
-**Fix:** Align preload `href`, `<source srcset>`, and `<img src>` to the same CDN WebP URL. Add `type="image/webp"` to preload. Remove `fetchpriority="high"` from logo.
-
-### 5.2 CLS — At Risk
-1. Google Fonts `print/onload` swap pattern — heading/body text repaints when fonts arrive; measurable CLS on mobile
-2. `reputationhub.site` review widget iframe — no explicit `width`/`height` HTML attributes; if JS resizes post-load, CLS will occur
-
-### 5.3 INP — Pass
-Minimal JS footprint. `requestAnimationFrame` throttle with `passive: true`. IntersectionObserver for animations. No heavy framework. GTM/GA4 async-loaded.
-
-### 5.4 TTFB — Pass
-~37ms proxy response. GitHub Pages + Fastly CDN. HTML `Cache-Control: max-age=600` (10 minutes) is overly conservative for a static site.
-
-### 5.5 Page Size
-HTML is 97.6 KB, primarily driven by inline CSS (~60–70 KB estimated). Moving CSS to an external long-TTL file would significantly improve repeat-visit performance.
-
-### 5.6 Top Performance Fixes
-| Fix | Impact | Effort |
-|---|---|---|
-| Align hero preload/source to same CDN WebP URL | LCP -200–500ms | Low |
-| Facade or lazy-load reputationhub iframe | LCP -100–300ms mobile | Medium |
-| Self-host or subset Google Fonts with `font-display: optional` | CLS -0.05–0.1 | Medium |
-| Extract inline CSS to external long-TTL stylesheet | Repeat LCP -200–400ms | High |
-| Increase HTML Cache-Control from 600s to 3600s+ | TTFB repeat visitors | Low |
-
----
-
-## 6. AI Search Readiness (GEO) — Score: 61 / 100
-
-| Dimension | Score |
+| Priority | Issue |
 |---|---|
-| Technical AI Accessibility | 80/100 |
-| Citability | 68/100 |
-| Structural Readability | 72/100 |
-| Authority & Brand Signals | 58/100 |
-| Multi-Modal Content | 35/100 |
+| Critical | **No Product schema** on any page — site sells physical products (oils, bottles, bakhoor, alcohol) but has zero `Product` + `Offer` schema; this is the highest-impact missing rich result type |
+| High | **Inner-page Store blocks create duplicate entity IDs** — pages declare their own `#store` @id instead of referencing the canonical `{ "@id": "https://scentbazaar.co/#store" }` |
+| High | **Service blocks use inline anonymous `provider`** instead of `{ "@id": "https://scentbazaar.co/#scentbazaar" }` reference (only `perfume-bottle-supplier-dubai.html` does this correctly) |
+| High | **AggregateRating: `5.0` on inner pages vs `4.9` on homepage** — standardise to `4.9` everywhere |
+| Medium | **`SearchAction` urlTemplate is non-functional** — remove from WebSite schema |
+| Medium | **Service blocks missing `serviceType` property** |
+| Medium | **No `WebPage` / `AboutPage` schema** on any page |
+| Medium | `dateModified` invalid on BreadcrumbList in `perfumers-alcohol-supplier-dubai.html` — remove it |
 
-### 6.1 AI Crawler Access — PASS
-All major AI crawlers explicitly allowed in robots.txt. Better configured than most competitors in this niche.
+**Recommended additions (in priority order):**
+1. `Product` + `Offer` schema on wholesale-perfume-oil, fragrance-oil-supplier, perfumers-alcohol, perfume-bottle, bakhoor pages
+2. `WebPage` / `AboutPage` on every page
+3. `HowTo` schema on private-label step-by-step section
+4. Fix all Service `provider` to use `@id` reference pattern
+5. Add `serviceType` to all Service blocks
 
-### 6.2 llms.txt — PRESENT (Needs Improvement)
-`https://scentbazaar.co/llms.txt` exists — fewer than 5% of comparable B2B suppliers have one. Missing: markdown section headers, machine-readable product taxonomy, RSL 1.0 licensing declaration.
+---
 
-### 6.3 FAQPage Schema — Broken (Homepage)
-The homepage FAQPage schema is invalid (trailing comma). This directly blocks Google AI Overviews eligibility for the homepage.
+## 4. Performance / Core Web Vitals — Score: 58/100
 
-### 6.4 Citability Gaps
-- No founder byline in crawlable metadata (Nawar Mohammed present on About page but not as `Person` schema)
-- Marketing-toned section intros reduce AI passage extraction probability
-- No Wikipedia entity, no Reddit presence, no third-party editorial mentions
+**Estimated CWV (current):**
+- LCP: 2.8–4.0s (Needs Improvement to Poor)
+- CLS: 0.05–0.15 (borderline)
+- INP: 150–300ms (Good to Needs Improvement)
 
-### 6.5 Platform Scores
+**Estimated CWV (after fixes):**
+- LCP: 1.8–2.5s (Good)
+- CLS: <0.05 (Good)
+- INP: <150ms (Good)
+
+**What's working:**
+- Hero image preloaded with `fetchpriority="high"`, WebP format
+- `font-display: optional` for display fonts
+- All images have `width`/`height` attributes
+- No JS framework — minimal INP baseline risk
+- Passive scroll listeners, IntersectionObserver for animations
+
+**Issues:**
+
+| Priority | Issue | CWV Impact |
+|---|---|---|
+| Critical | **Google Fonts loaded via `@import` inside `fonts.css`** — minimum 2-RTT chain, adds 300–600ms | LCP |
+| Critical | **No `preconnect` to `fonts.googleapis.com` or `fonts.gstatic.com`** | LCP |
+| Critical | **`Outfit` font still imported** despite being marked legacy | LCP |
+| High | **Reviews iframe has no `loading="lazy"`** — third-party JS loads immediately | INP |
+| Medium | **73KB monolithic `styles.css` is render-blocking** — inline critical CSS for above-fold | LCP |
+| Medium | **Large inline IIFE script (~200+ lines)** runs all setup synchronously | INP |
+| Low | **`getBoundingClientRect()` called on every `mousemove`** — cache on `mouseenter` | INP |
+
+**Priority fix for fonts:**
+Remove `@import` lines from `fonts.css`. Add to `<head>` in every HTML file:
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+```
+Remove Outfit import entirely.
+
+---
+
+## 5. AI Search Readiness (GEO) — Score: 74/100
+
+**Platform scores:**
 | Platform | Score |
 |---|---|
-| Google AI Overviews | 52/100 |
-| ChatGPT | 48/100 |
-| Perplexity | 55/100 |
-| Bing Copilot | 50/100 |
+| Google AI Overviews | 72/100 |
+| Perplexity AI | 76/100 |
+| Bing Copilot | 70/100 |
+| ChatGPT Browse | 68/100 |
 
----
+**What's working:**
+- All AI crawlers allowed in robots.txt
+- `llms.txt` present and well-structured
+- Question-format H2/H3 headings on inner pages
+- Rich FAQPage schema with full Question/Answer pairs
+- `Speakable` schema on homepage and private-label page
+- Specific, citable facts distributed across site (MOQ, shipping countries, turnaround times)
 
-## 7. Search Experience Optimization (SXO) — Score: 58 / 100
+**Gaps:**
 
-### 7.1 Intent Alignment
-| Page | SERP Intent | Alignment | Severity |
-|---|---|---|---|
-| Homepage | Commercial B2B hub | ALIGNED | — |
-| /wholesale-perfume-oil-dubai | B2B transactional | MEDIUM MISMATCH | Buyer wants pricing/catalog ATF; page leads with educational content |
-| /private-label-perfume-dubai | Commercial + transactional | LOW/MEDIUM MISMATCH | Lacks outcome social proof visible in competing pages |
-| /perfume-store-deira | Local transactional | ALIGNED | Missing schema limits local pack eligibility |
-
-### 7.2 Conversion Path: 58/100
-- Persistent floating WhatsApp CTA — positive for GCC/South Asian buyers
-- No pricing transparency — buyers cannot pre-qualify without cold contact
-- No RFQ/email inquiry form — WhatsApp-only excludes European/North American buyers (50+ countries claim)
-- No catalog download / lead magnet
-
-### 7.3 Persona Coverage
-| Persona | Coverage |
+| Priority | Issue |
 |---|---|
-| GCC retailer / small brand owner | Good |
-| South/SE Asian importer | Partial |
-| European private label buyer | Poor |
-| Industrial/contract manufacturer | Partial |
-| Fragrance startup | Partial |
-| Local walk-in customer | Good |
-| Export/logistics buyer | Poor |
+| High | FAQPage schema inconsistent across inner pages — add to every service page |
+| High | Homepage hero opens with brand voice, not declarative facts — AI models prefer entity descriptions |
+| High | No LinkedIn company page — absent from `sameAs`; critical for B2B entity verification |
+| Medium | Review count inconsistency — schema says 162, visible copy says "100+" |
+| Medium | `llms.txt` missing RSL 1.0 license declaration and per-page links |
+| Low | No Wikipedia entity — significant gap for ChatGPT citation confidence |
 
 ---
 
-## 8. Local SEO — Score: 47 / 100
+## 6. Local SEO — Score: 61/100
 
-| Dimension | Score |
+**What's working:**
+- Physical address with coordinates and Google Maps link in schema and visible content
+- 162 Google reviews at 4.9 stars
+- Dedicated location page (`perfume-store-deira.html`)
+- Multiple dedicated service/product pages
+
+**Issues:**
+
+| Severity | Issue |
 |---|---|
-| GBP Signals | 38/100 |
-| Reviews & Reputation | 55/100 |
-| Local On-Page SEO | 60/100 |
-| NAP Consistency & Citations | 35/100 |
-| Local Schema | 30/100 |
-| Local Link & Authority | 30/100 |
-
-### 8.1 NAP Consistency
-- **Address and phone:** Consistent across all pages
-- **Hours:** Critically inconsistent — three different versions (see Section 4.3)
-
-### 8.2 Schema
-Only `/perfume-store-deira` has valid, functioning local schema. Homepage LocalBusiness schema is broken. Missing: `aggregateRating`, `geo` coordinates, `priceRange`.
-
-### 8.3 GBP Integration
-Google Maps deep link present. No embedded Maps iframe. 162 five-star reviews in copy — not in parseable schema.
-
-### 8.4 Local Content Quality
-`/perfume-store-deira` has strong local context: Souq Naif neighbourhood history, Baniyas Square metro directions, prayer hour guidance, parking details. Exceeds minimum local page quality thresholds.
-
-### 8.5 Citation Opportunities
-No verified presence on: Dubai Chamber of Commerce, UAE Yellow Pages, Dubizzle Business, Foursquare, TripAdvisor (Souq Naif has significant tourist footfall), Waze, Justdial UAE.
+| Critical | **Broken GBP review CTA on all 14 pages** — replace with `https://search.google.com/local/writereview?placeid=ChIJcWa6NWNDXz4RMVewZCY5-DQ` |
+| High | **Store `name` on `perfume-store-deira.html`** is "Scent Bazaar — Perfume Store Deira Dubai" — must be "Scent Bazaar" to prevent Knowledge Graph entity split |
+| High | **Friday hours inconsistent** — About/store pages say 2:00 PM reopening; private-label page says 1:30 PM |
+| Medium | **No Google Maps embed on `perfume-store-deira.html`** |
+| Medium | **Visible review copy says "100+"** — schema says 162; update all visible copy |
+| Medium | **No postal code** in any PostalAddress block |
+| Medium | **Keyword cannibalization** between `fragrance-oil-supplier-dubai.html` and `perfume-oil-supplier-dubai.html` |
+| Low | No Arabic-language content despite schema declaring `availableLanguage: ["English", "Arabic"]` |
+| Low | No UAE directory citations confirmed (Kompass UAE, Dubai Chamber, Yellow Pages UAE) |
 
 ---
 
-## 9. Backlinks — Insufficient Data
+## 7. Sitemap — Score: 90/100
 
-No backlink API credentials configured (Moz, Bing Webmaster Tools, DataForSEO). Common Crawl query unavailable without toolchain.
-
-**Estimated profile (site age + structure):**
-- Domain age: ~1 year (2025 launch)
-- Estimated referring domains: 0–10
-- Estimated DA equivalent: 5–15
-
-### Priority Link Targets
-| # | Target | Type | Effort |
-|---|---|---|---|
-| 1 | Dubai Chamber + UAE Yellow Pages | Local citations | Low |
-| 2 | Alibaba.com + TradeKey supplier profiles | B2B marketplace | Low |
-| 3 | Made-in-UAE.com | Export directory | Low |
-| 4 | IFRA / Fragrance Foundation directory | Trade association | Medium |
-| 5 | Perfumer & Flavorist guest article | Editorial | High |
+- Well-formed XML, 21 URLs, all pages covered, no orphans
+- Both sitemaps declared in robots.txt
+- **Issue (Medium):** All 21 URLs share identical `lastmod` of `2026-04-26` — use real per-page dates
+- **Issue (Low):** `<changefreq>` and `<priority>` tags present — Google ignores both; remove
+- **Issue (Low):** Image sitemap covers only 8 of 21 pages — expand to remaining pages
 
 ---
 
-## 10. Images — Score: 70 / 100
+## 8. Backlinks — Insufficient Data
 
-- 15 images in sitemap-images.xml across 13 pages
-- Hero images: WebP with `<picture>` element — correct
-- Logo served as PNG — should be SVG
-- Image reuse across unrelated pages detected (same URL on homepage and bakhoor page)
-- 5 pages have no entry in image sitemap — may lack imagery
-- `loading="lazy"` with explicit dimensions confirmed on below-fold images — correct
-- No alt text auditable from sitemap — manual check required
+GSC verification is not active and no API tools are configured. Directional estimate: DA/DR 1–20 range.
 
----
-
-## Page-by-Page Summary
-
-| Page | Title | Meta Desc | Schema | Key Issue |
-|---|---|---|---|---|
-| / | ✓ | ✗ | Broken | Fix JSON-LD trailing comma |
-| /wholesale-perfume-oil-dubai | ✓ | ✗ | None | Add schema + meta desc |
-| /bulk-fragrance-oil-uae | ✓ | ✗ | None | Add schema + meta desc |
-| /perfumers-alcohol-supplier-dubai | ✓ | ✗ | None | Add schema + meta desc |
-| /perfume-bottle-supplier-dubai | ✓ | ✗ | None | Add schema + meta desc |
-| /bakhoor-supplier-dubai | ✓ | ✗ | None | Add schema + meta desc |
-| /candle-fragrance-oil-supplier-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /diffuser-base-supplier-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /cosmetic-base-supplier-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /perfume-base-supplier-uae | Unknown | ✗ | None | Verify title + add schema |
-| /perfume-caps-spray-pumps | Unknown | ✗ | None | Verify title + add schema |
-| /private-label-perfume-dubai | ✓ | ✗ | None | Add schema + social proof |
-| /custom-perfume-blending-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /perfume-filling-service-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /fragrance-oil-supplier-dubai | Unknown | ✗ | None | Verify title + add schema |
-| /perfume-store-deira | ✓ | ✗ | Valid | Fix hours + embed map |
-| /about-us | ✓ | ✗ | None | Add schema + meta desc |
-| /perfume-oil-supplier-dubai | ✓ | ✗ | Partial | Differentiate vs /wholesale page |
+**Immediate:**
+1. Uncomment GSC verification tag — unlocks all free Google link data
+2. Create Moz Link Explorer free account — referring domains, DA, anchors, spam score
+3. Begin citation building: Kompass UAE, Dubai Chamber, UAE Yellow Pages, TradeIndia/ExportHub, Trustpilot
 
 ---
 
-*Report generated 2026-04-25 by Claude SEO Audit System. Subagents: seo-technical, seo-content, seo-schema, seo-performance, seo-geo, seo-sxo, seo-local, seo-backlinks.*
+## Files Requiring Immediate Attention
+
+| File | Issues |
+|---|---|
+| `index.html` | GSC verification commented out; H1 keyword gap; SearchAction schema; fonts preconnect missing |
+| `about-us.html` | Wrong navigation component; broken style block; placeholder review URL |
+| `fragrance-oil-supplier-dubai.html` | Placeholder review URL; malformed footer HTML; AggregateRating 5.0; breadcrumb mislabelled |
+| `private-label-perfume-dubai.html` | Placeholder review URL; malformed footer HTML; AggregateRating 5.0; Friday hours 1:30 PM |
+| `perfumers-alcohol-supplier-dubai.html` | Placeholder review URL; malformed footer HTML; AggregateRating 5.0; invalid dateModified on BreadcrumbList |
+| `bakhoor-supplier-dubai.html` | Placeholder review URL; AggregateRating 5.0 |
+| `fonts.css` | Google Fonts @import chain; legacy Outfit import |
+| `perfume-store-deira.html` | Schema name wrong; no Google Maps embed |
+| All inner pages | Duplicate/boilerplate meta descriptions; missing Product schema |

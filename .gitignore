@@ -6,6 +6,9 @@ Desktop.ini
 # IDE/Agent config
 .gemini/
 
+# SEO audit cache
+.seo-cache/
+
 
 
 
