@@ -1,10 +1,16 @@
-User-agent: *
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -16,7 +22,17 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
+Allow: /
+
 Sitemap: https://scentbazaar.co/sitemap.xml
 Sitemap: https://scentbazaar.co/sitemap-images.xml
-
-
