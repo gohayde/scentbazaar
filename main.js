@@ -1,6 +1,7 @@
 (function() {
     /* ── 1. SCROLL PROGRESS BAR ──────────────────────────────── */
     var prog = document.getElementById('scroll-progress');
+    var isCoarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
     window.addEventListener('scroll', function() {
         var s = document.documentElement;
         var pct = (window.scrollY / (s.scrollHeight - s.clientHeight)) * 100;
@@ -90,6 +91,7 @@
 
     /* ── 7. FLOATING PARTICLES ───────────────────────────────── */
     function injectParticles(container, count) {
+        if (isCoarsePointer) return;
         var dxOpts = [-14,-10,-6,6,10,14];
         var dyOpts = [-20,-16,-12,-8,8,12];
         for (var i = 0; i < count; i++) {
@@ -125,12 +127,13 @@
 
     /* ── 9. SERVICE CARD SPOTLIGHT (magic-card) ─────────────── */
     document.querySelectorAll('.service-card').forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
+        if (isCoarsePointer) return;
+        card.addEventListener('pointermove', function(e) {
             var r = card.getBoundingClientRect();
             card.style.setProperty('--cx', (e.clientX - r.left) + 'px');
             card.style.setProperty('--cy', (e.clientY - r.top) + 'px');
         });
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('pointerleave', function() {
             card.style.setProperty('--cx', '-999px');
             card.style.setProperty('--cy', '-999px');
         });
@@ -138,12 +141,13 @@
 
     /* ── 10. REVIEW CARD SPOTLIGHT ──────────────────────────── */
     document.querySelectorAll('.review-card').forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
+        if (isCoarsePointer) return;
+        card.addEventListener('pointermove', function(e) {
             var r = card.getBoundingClientRect();
             card.style.setProperty('--cx', (e.clientX - r.left) + 'px');
             card.style.setProperty('--cy', (e.clientY - r.top) + 'px');
         });
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('pointerleave', function() {
             card.style.setProperty('--cx', '-999px');
             card.style.setProperty('--cy', '-999px');
         });
@@ -153,13 +157,14 @@
 
     /* ── 12. GLARE HOVER (private label + product images) ────── */
     document.querySelectorAll('.glare-hover').forEach(function(el) {
-        el.addEventListener('mousemove', function(e) {
+        if (isCoarsePointer) return;
+        el.addEventListener('pointermove', function(e) {
             var r = el.getBoundingClientRect();
             el.style.setProperty('--gx', ((e.clientX - r.left) / r.width * 100) + '%');
             el.style.setProperty('--gy', ((e.clientY - r.top) / r.height * 100) + '%');
         });
-        el.addEventListener('mouseenter', function() { el.classList.add('glare-active'); });
-        el.addEventListener('mouseleave', function() { el.classList.remove('glare-active'); });
+        el.addEventListener('pointerenter', function() { el.classList.add('glare-active'); });
+        el.addEventListener('pointerleave', function() { el.classList.remove('glare-active'); });
     });
 
     /* ── 13. SEO HERO RULE INJECTION ─────────────────────────── */
