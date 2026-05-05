@@ -631,29 +631,6 @@
                 title='Customer reviews'
                 style='border:0;display:block;width:100%;min-height:600px;'
                 data-widget-src='https://reputationhub.site/reputation/assets/review-widget.js'></iframe>
-            <script>
-            (function(){
-                var iframe = document.querySelector('.lc_reviews_widget');
-                if (!iframe) return;
-                var loaded = false;
-                function loadWidget() {
-                    if (loaded) return;
-                    loaded = true;
-                    var s = document.createElement('script');
-                    s.src = iframe.getAttribute('data-widget-src');
-                    s.async = true;
-                    s.defer = true;
-                    document.body.appendChild(s);
-                }
-                if ('IntersectionObserver' in window) {
-                    new IntersectionObserver(function(entries, obs) {
-                        if (entries[0].isIntersecting) { loadWidget(); obs.disconnect(); }
-                    }, { rootMargin: '200px' }).observe(iframe);
-                } else {
-                    loadWidget();
-                }
-            })();
-            </script>
         </div>
     </section>
 

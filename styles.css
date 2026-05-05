@@ -137,9 +137,9 @@ li { margin-bottom: 10px; }
 
 /* ── SCROLL PROGRESS ──────────────────────────────────────── */
 #scroll-progress {
-  position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%;
   background: linear-gradient(90deg, var(--amber), var(--amber-lt), var(--amber-pale));
-  z-index: 999; transition: width 0.1s linear;
+  z-index: 999; transform: scaleX(0); transform-origin: left center; will-change: transform;
 }
 
 /* ── ANNOUNCEMENT BAR ─────────────────────────────────────── */
@@ -1540,6 +1540,16 @@ details p {
 @media (prefers-reduced-motion: reduce) {
   .hero-bg-img { animation: none !important; }
   .announce-track, .marquee-track { animation-play-state: paused !important; }
+}
+
+@media (max-width: 768px) {
+  .hero-bg-img,
+  .particle,
+  .border-beam::before,
+  .scent-img::before,
+  .btn-primary::before {
+    animation: none !important;
+  }
 }
 
 /* ============================================================

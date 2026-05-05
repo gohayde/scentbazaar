@@ -2,11 +2,26 @@
     /* ── 1. SCROLL PROGRESS BAR ──────────────────────────────── */
     var prog = document.getElementById('scroll-progress');
     var isCoarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-    window.addEventListener('scroll', function() {
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var progressPending = false;
+    function updateProgress() {
+        if (!prog) return;
         var s = document.documentElement;
-        var pct = (window.scrollY / (s.scrollHeight - s.clientHeight)) * 100;
-        if (prog) prog.style.width = pct + '%';
+        var max = Math.max(1, s.scrollHeight - s.clientHeight);
+        var pct = Math.min(1, Math.max(0, window.scrollY / max));
+        prog.style.transform = 'scaleX(' + pct.toFixed(4) + ')';
+        prog.setAttribute('aria-valuenow', Math.round(pct * 100));
+    }
+    window.addEventListener('scroll', function() {
+        if (!progressPending) {
+            progressPending = true;
+            requestAnimationFrame(function() {
+                updateProgress();
+                progressPending = false;
+            });
+        }
     }, { passive: true });
+    updateProgress();
 
     /* ── 2. HEADER SCROLL ────────────────────────────────────── */
     var header = document.getElementById('header');
@@ -17,7 +32,7 @@
         if (!scrollPending) {
             scrollPending = true;
             requestAnimationFrame(function() {
-                header.classList.toggle('scrolled', window.scrollY > barH + 40);
+                if (header) header.classList.toggle('scrolled', window.scrollY > barH + 40);
                 document.body.classList.toggle('scrolled', window.scrollY > barH + 40);
                 scrollPending = false;
             });
@@ -71,27 +86,30 @@
     var hamburger = document.getElementById('hamburger');
     var nav = document.getElementById('nav');
     function toggleNav() {
+        if (!hamburger || !nav) return;
         var isOpen = nav.classList.toggle('show');
         hamburger.classList.toggle('active', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
     }
-    hamburger.addEventListener('click', toggleNav);
-    hamburger.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); }
-    });
-    document.querySelectorAll('#nav a').forEach(function(a) {
-        a.addEventListener('click', function() {
-            nav.classList.remove('show');
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', toggleNav);
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); }
         });
-    });
+        document.querySelectorAll('#nav a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                nav.classList.remove('show');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
     /* ── 7. FLOATING PARTICLES ───────────────────────────────── */
     function injectParticles(container, count) {
-        if (isCoarsePointer) return;
+        if (isCoarsePointer || reduceMotion) return;
         var dxOpts = [-14,-10,-6,6,10,14];
         var dyOpts = [-20,-16,-12,-8,8,12];
         for (var i = 0; i < count; i++) {
@@ -195,5 +213,31 @@
         var schedule = window.requestIdleCallback || function(cb) { return setTimeout(cb, 2500); };
         schedule(loadExternalTracking, { timeout: 5000 });
     }, { once: true });
+
+    /* ── 16. LAZY REVIEW WIDGET LOADER ─────────────────────── */
+    function loadReviewWidget(iframe) {
+        if (!iframe || iframe.dataset.widgetLoaded === 'true') return;
+        iframe.dataset.widgetLoaded = 'true';
+        var widgetSrc = iframe.getAttribute('data-widget-src');
+        if (!widgetSrc || document.querySelector('script[src="' + widgetSrc + '"]')) return;
+        var s = document.createElement('script');
+        s.src = widgetSrc;
+        s.async = true;
+        s.defer = true;
+        document.body.appendChild(s);
+    }
+    document.querySelectorAll('.lc_reviews_widget[data-widget-src]').forEach(function(iframe) {
+        if ('IntersectionObserver' in window) {
+            var reviewObserver = new IntersectionObserver(function(entries, obs) {
+                if (entries[0] && entries[0].isIntersecting) {
+                    loadReviewWidget(iframe);
+                    obs.disconnect();
+                }
+            }, { rootMargin: '200px' });
+            reviewObserver.observe(iframe);
+        } else {
+            loadReviewWidget(iframe);
+        }
+    });
 
 })();
