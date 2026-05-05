@@ -8,7 +8,8 @@ Desktop.ini
 
 # SEO audit cache
 .seo-cache/
-bucket-all-site-images/
+bucket-all-site-images/*.csv
+bucket-all-site-images/*.txt
 
 
 
