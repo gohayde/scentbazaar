@@ -1,7 +1,7 @@
 Upload this whole folder to the Cloudflare bucket.
 
 Recommended bucket path:
-https://cdn.scentbazaar.co/images/
+https://cdn.scentbazaar.co/bucket-webp-images/
 
 Files:
 homepage-hero-showroom.webp
@@ -20,6 +20,6 @@ service-custom-blending.webp
 service-private-label.webp
 
 After upload, each file should return 200 from:
-https://cdn.scentbazaar.co/images/FILENAME.webp
+https://cdn.scentbazaar.co/bucket-webp-images/FILENAME.webp
 
 Do not switch site URLs to cdn.scentbazaar.co until every URL returns 200.
