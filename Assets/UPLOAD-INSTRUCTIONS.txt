@@ -1,0 +1,10 @@
+Upload the files in this folder to:
+
+https://cdn.scentbazaar.co/bucket-all-site-images/
+
+Upload image files plus IMAGE-MAP.csv if you want the map in the bucket.
+Prepared unique upload files: 28
+Mapped URL rows: 63
+Failed sources: 9
+
+After upload, tell Codex and we will switch site references from old URLs to the mapped bucket URLs.

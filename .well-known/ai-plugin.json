@@ -1,4 +1,4 @@
-{
+﻿{
   "schema_version": "v1",
   "name_for_human": "Scent Bazaar",
   "name_for_model": "scent_bazaar",
@@ -11,7 +11,7 @@
     "type": "openapi",
     "url": "https://scentbazaar.co/openapi.yaml"
   },
-  "logo_url": "https://cdn.scentbazaar.co/bucket-all-site-images/logo.webp",
+  "logo_url": "https://cdn.scentbazaar.co/logo.webp",
   "contact_email": "info@scentbazaar.co",
   "legal_info_url": "https://scentbazaar.co/privacy-policy"
 }

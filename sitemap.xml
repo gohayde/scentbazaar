@@ -115,9 +115,21 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://scentbazaar.co/blog/top-perfume-oil-suppliers-dubai/</loc>
+    <loc>https://scentbazaar.co/blog/top-perfume-oil-suppliers-dubai</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://scentbazaar.co/privacy-policy</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://scentbazaar.co/terms-of-service</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 </urlset>

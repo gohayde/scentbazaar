@@ -1,0 +1,35 @@
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd49277ba014b7eb3145.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd49277ba082afeb3144.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd49bfc81f109409b8fc.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd49bfc81f404e09b8ff.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd4aeba4871bf53db423.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/LH6FKr04a5NhkYZQVZLV/media/69b4fd4aeba4874aba3db424.png
+  FAILED: HTTP 404
+  referenced in: sitemap-images.xml
+
+https://assets.cdn.filesafe.space/n2JV7OnZcOBeCtUnjWku/media/69b4fd49cab7f79df3c7a01b.png
+  FAILED: HTTP 404
+  referenced in: bulk-fragrance-oil-uae.html
+
+https://cdn.scentbazaar.co/bucket-webp-images/FILENAME.webp
+  FAILED: HTTP 404
+  referenced in: bucket-webp-images/IMAGE-MAP.txt
+
+https://scentbazaar.co/logo.png
+  FAILED: HTTP 404
+  referenced in: .well-known/ai-plugin.json
