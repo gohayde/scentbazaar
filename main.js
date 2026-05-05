@@ -181,4 +181,19 @@
         io.observe(card);
     });
 
+    /* ── 15. NON-CRITICAL TRACKING ─────────────────────────── */
+    function loadExternalTracking() {
+        if (document.querySelector('script[data-tracking-id="tk_8a2f3af5f9a141eaa24515664c828e74"]')) return;
+        var s = document.createElement('script');
+        s.src = 'https://link.gohayde.com/js/external-tracking.js';
+        s.async = true;
+        s.dataset.trackingId = 'tk_8a2f3af5f9a141eaa24515664c828e74';
+        s.dataset.debug = 'true';
+        document.body.appendChild(s);
+    }
+    window.addEventListener('load', function() {
+        var schedule = window.requestIdleCallback || function(cb) { return setTimeout(cb, 2500); };
+        schedule(loadExternalTracking, { timeout: 5000 });
+    }, { once: true });
+
 })();
