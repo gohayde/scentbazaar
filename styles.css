@@ -1970,3 +1970,62 @@ details p {
 .reviews-section > .container > div:first-child::before {
   display: none !important;
 }
+
+/* ── EXTRACTED INLINE STYLES ──────────────────────────────── */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--amber);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  z-index: 9999;
+  transition: top 0.2s;
+  text-decoration: none;
+}
+.skip-to-content:focus { top: 16px; }
+
+.logo-flex { display: flex; align-items: center; }
+.logo-img-header { height: 45px; width: auto; border-radius: 6px; }
+.logo-img-footer { height: 54px; width: auto; border-radius: 6px; }
+
+.section-services { padding: 80px 0 100px; }
+
+.section-h2 { margin-bottom: 20px; }
+.section-p { margin-bottom: 24px; }
+
+.store-intro { text-align: center; max-width: 850px; margin: 0 auto 48px; }
+.store-intro-h2 { margin-bottom: 24px; line-height: 1.1; }
+.store-intro-tag { margin-bottom: 24px; font-size: 0.72rem; }
+
+.map-iframe { border: 0; }
+
+.link-plain { color: inherit; text-decoration: none; }
+
+.footer-contact-item { display: flex; align-items: center; gap: 15px; }
+.footer-contact-addr { align-items: flex-start; margin-bottom: 24px; }
+.footer-contact-icon { color: var(--amber); }
+.footer-contact-icon--top { margin-top: 4px; }
+.footer-contact-text { color: #ccc; line-height: 1.6; }
+.footer-contact-phone { color: #ccc; text-decoration: none; font-weight: 600; }
+
+.footer-review-wrap { margin-bottom: 16px; text-align: center; }
+.footer-review-btn {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-legal { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer-legal-links { display: flex; gap: 20px; font-size: 0.85rem; }
+
+.lc_reviews_widget { min-width: 100%; width: 100%; }

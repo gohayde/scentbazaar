@@ -1,11 +1,19 @@
 /*
+  ! Access-Control-Allow-Origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://reputationhub.site https://link.gohayde.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://assets.cdn.filesafe.space https://www.google.com; frame-src https://www.google.com https://maps.google.com https://reputationhub.site; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com https://reputationhub.site https://link.gohayde.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://assets.cdn.filesafe.space https://www.google.com; frame-src https://www.google.com https://maps.google.com https://reputationhub.site; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;
 
 /styles.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/main.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/gtm-init.js
   Cache-Control: public, max-age=31536000, immutable
 
 /fonts.css
