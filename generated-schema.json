@@ -1,0 +1,246 @@
+{
+  "_instructions": "Add each schema block below as a separate <script type='application/ld+json'> tag in your HTML <head>. Validate at https://validator.schema.org before deploying.",
+
+  "schemas": [
+
+    {
+      "_name": "LocalBusiness + Organization (Homepage — CRITICAL)",
+      "_placement": "Every page <head>, especially homepage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "Store"],
+        "@id": "https://scentbazaar.co/#business",
+        "name": "Scent Bazaar",
+        "alternateName": "Scent Bazaar Dubai",
+        "description": "Wholesale perfume oil supplier in Dubai offering 2,000+ fragrance oils, private label filling, custom blending, and global export to 50+ countries.",
+        "url": "https://scentbazaar.co/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cdn.scentbazaar.co/logo.webp"
+        },
+        "image": "https://cdn.scentbazaar.co/logo.webp",
+        "telephone": "+971547727106",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. 47, Souq Naif, 47 St",
+          "addressLocality": "Naif, Deira",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "25.27141642862822",
+          "longitude": "55.30492436441792"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "08:30",
+            "closes": "24:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "08:30",
+            "closes": "12:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "14:00",
+            "closes": "24:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "162",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "priceRange": "$$",
+        "currenciesAccepted": "AED, USD",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Worldwide"
+        },
+        "foundingDate": "2018",
+        "founder": {
+          "@type": "Person",
+          "name": "Nawar Mohammed",
+          "jobTitle": "Founder & Fragrance Chemist"
+        },
+        "sameAs": [
+          "https://www.instagram.com/scentbazaar",
+          "https://www.tiktok.com/@scentbazaar",
+          "https://www.facebook.com/scentbazaar",
+          "https://www.youtube.com/@scentbazaar"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+971547727106",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Arabic"],
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            },
+            "contactOption": "TollFree"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Wholesale Fragrance Products",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Perfume Oils"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Perfumers Alcohol"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Bakhoor"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Candle Fragrance Oils"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Bottles & Packaging"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Private Label Services"
+            }
+          ]
+        }
+      }
+    },
+
+    {
+      "_name": "WebSite + SearchAction (Homepage)",
+      "_placement": "Homepage <head> only",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://scentbazaar.co/#website",
+        "name": "Scent Bazaar",
+        "url": "https://scentbazaar.co/",
+        "description": "Dubai's wholesale fragrance source — perfume oils, private label, and global export.",
+        "publisher": {
+          "@id": "https://scentbazaar.co/#business"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://scentbazaar.co/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    },
+
+    {
+      "_name": "Service — Private Label (Service page or Homepage)",
+      "_placement": "Private label page or homepage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Private Label Fragrance Filling",
+        "name": "Private Label Perfume Service",
+        "description": "Custom private label perfume filling and crimping. Choose from 2,000+ fragrance oils, select your bottles and packaging, and receive your branded product in 3–11 weeks.",
+        "provider": {
+          "@id": "https://scentbazaar.co/#business"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Worldwide"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "AED",
+          "eligibleMinimumQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "100",
+            "unitText": "ml"
+          }
+        }
+      }
+    },
+
+    {
+      "_name": "BreadcrumbList — Example for a product category page",
+      "_placement": "Category and product pages",
+      "_note": "Replace href and name values per page. This is an example for a 'Perfume Oils' category page.",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://scentbazaar.co/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://scentbazaar.co/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Perfume Oils",
+            "item": "https://scentbazaar.co/products/perfume-oils"
+          }
+        ]
+      }
+    },
+
+    {
+      "_name": "Product — Example for a wholesale perfume oil product page",
+      "_placement": "Individual product pages",
+      "_note": "Duplicate and fill in real product name, description, SKU, image, and URL for each product. AggregateRating on individual products requires product-specific reviews.",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "[Product Name, e.g. Oud Rose Perfume Oil]",
+        "description": "[Product description]",
+        "sku": "[SKU]",
+        "image": "[Product image URL]",
+        "brand": {
+          "@type": "Brand",
+          "name": "Scent Bazaar"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "[Product page URL]",
+          "priceCurrency": "AED",
+          "price": "[Price]",
+          "priceValidUntil": "2027-01-01",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://scentbazaar.co/#business"
+          },
+          "eligibleMinimumQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "100",
+            "unitText": "ml"
+          }
+        }
+      }
+    }
+
+  ]
+}

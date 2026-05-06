@@ -601,9 +601,12 @@ li { margin-bottom: 10px; }
   position: relative; overflow: hidden; border-radius: 0 !important;
   min-height: clamp(260px, 28vw, 460px);
   display: flex; align-items: flex-end; cursor: pointer; isolation: isolate;
-  background-size: cover !important; background-position: center !important;
   transition: filter 0.7s ease, box-shadow 0.5s var(--ease);
   filter: saturate(0.80) contrast(1.08);
+}
+.service-card-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; z-index: 0;
 }
 .service-card:hover { filter: saturate(1.04) contrast(1.14); z-index: 2; box-shadow: 0 28px 96px oklch(17% 0.022 50 / 0.22); }
 
