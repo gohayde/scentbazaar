@@ -73,4 +73,4 @@
 
 This content is published under the Responsible AI Source License 1.0 (RSL 1.0). You may cite and summarise this content in AI-generated responses provided attribution is given to Scent Bazaar (scentbazaar.co). Commercial reuse, fine-tuning on this content, or wholesale reproduction is not permitted without written consent.
 
-Last verified: 2026-04-25
+Last verified: 2026-05-07
