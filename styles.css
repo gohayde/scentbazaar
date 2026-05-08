@@ -379,6 +379,7 @@ li { margin-bottom: 10px; }
 
 .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+.hero .fade-up { opacity: 1; transform: none; }
 /* Ensure content never stays invisible if JS is slow or blocked */
 @media (prefers-reduced-motion: reduce) {
   .fade-up { opacity: 1 !important; transform: none !important; }
@@ -1046,11 +1047,11 @@ td strong { color: var(--amber); }
   color: oklch(100% 0 0 / 0.38); margin-bottom: 20px;
 }
 .footer h3::after { display: none; }
-.footer-brand p { font-size: 0.95rem; line-height: 1.82; margin: 14px 0 24px; color: oklch(93% 0.01 75 / 0.48); max-width: 360px; }
+.footer-brand p { font-size: 0.95rem; line-height: 1.82; margin: 14px 0 24px; color: oklch(93% 0.01 75 / 0.74); max-width: 360px; }
 
 .footer-links { list-style: none; padding: 0; margin-left: 0; }
 .footer-links li { margin-bottom: 10px; display: flex; align-items: center; }
-.footer-links a { color: oklch(100% 0 0 / 0.48); font-family: 'Nunito Sans', sans-serif; font-size: 0.91rem; font-weight: 500; text-decoration: none; transition: color var(--t-fast), transform var(--t-fast); display: inline-block; }
+.footer-links a { color: oklch(100% 0 0 / 0.74); font-family: 'Nunito Sans', sans-serif; font-size: 0.91rem; font-weight: 500; text-decoration: none; transition: color var(--t-fast), transform var(--t-fast); display: inline-block; }
 .footer-links a:hover { color: var(--amber-lt); transform: translateX(4px); }
 
 .footer-social { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
@@ -1550,9 +1551,13 @@ details p {
   .particle,
   .border-beam::before,
   .scent-img::before,
+  .announce-track,
+  .marquee-track,
+  .wa-float,
   .btn-primary::before {
     animation: none !important;
   }
+  .hero-bg-img { transform: none !important; }
 }
 
 /* ============================================================
@@ -1676,7 +1681,7 @@ details p {
 
 .hero-proof-bar .hero-proof-label {
   font-size: clamp(0.6rem, 0.75vw, 0.7rem) !important;
-  color: oklch(93% 0.01 75 / 0.52) !important;
+  color: oklch(93% 0.01 75 / 0.72) !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
   font-weight: 600 !important;
