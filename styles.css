@@ -693,7 +693,7 @@ li { margin-bottom: 10px; }
   background: radial-gradient(circle, oklch(56% 0.14 46 / 0.06) 0%, transparent 70%);
   pointer-events: none; z-index: 0;
 }
-.lc_reviews_widget { border-radius: var(--r-xl); overflow: hidden; }
+
 
 /* ── SCENT LIBRARY ────────────────────────────────────────── */
 .scent-section { background: var(--ink); position: relative; overflow: hidden; }
@@ -1393,14 +1393,6 @@ section { padding: clamp(60px, 10vw, 140px) 0; }
   user-select: none;
 }
 
-/* Iframe wrapper — give it a polished border */
-.lc_reviews_widget {
-  border: 1px solid oklch(100% 0 0 / 0.08) !important;
-  border-radius: var(--r-xl) !important;
-  overflow: hidden !important;
-  box-shadow: 0 24px 80px oklch(0% 0 0 / 0.18) !important;
-  background: oklch(16% 0.018 50) !important;
-}
 
 /* ── STORE SECTION: Add depth to the contact box ── */
 .store-contact {
@@ -2065,4 +2057,3 @@ details p {
 .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .footer-legal-links { display: flex; gap: 20px; font-size: 0.85rem; }
 
-.lc_reviews_widget { min-width: 100%; width: 100%; }

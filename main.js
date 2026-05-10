@@ -214,30 +214,5 @@
         schedule(loadExternalTracking, { timeout: 5000 });
     }, { once: true });
 
-    /* ── 16. LAZY REVIEW WIDGET LOADER ─────────────────────── */
-    function loadReviewWidget(iframe) {
-        if (!iframe || iframe.dataset.widgetLoaded === 'true') return;
-        iframe.dataset.widgetLoaded = 'true';
-        var widgetSrc = iframe.getAttribute('data-widget-src');
-        if (!widgetSrc || document.querySelector('script[src="' + widgetSrc + '"]')) return;
-        var s = document.createElement('script');
-        s.src = widgetSrc;
-        s.async = true;
-        s.defer = true;
-        document.body.appendChild(s);
-    }
-    document.querySelectorAll('.lc_reviews_widget[data-widget-src]').forEach(function(iframe) {
-        if ('IntersectionObserver' in window) {
-            var reviewObserver = new IntersectionObserver(function(entries, obs) {
-                if (entries[0] && entries[0].isIntersecting) {
-                    loadReviewWidget(iframe);
-                    obs.disconnect();
-                }
-            }, { rootMargin: '200px' });
-            reviewObserver.observe(iframe);
-        } else {
-            loadReviewWidget(iframe);
-        }
-    });
 
 })();
